@@ -1,0 +1,296 @@
+.ant-layout-header {
+  margin-top: 120px;
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  background-color: #EEEEEE;
+  height: 100px;
+  margin: 0;
+  position: relative; /* Add this to make sure positioning works */
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+  top: -20px; /* Adjust the top distance as needed */
+  right: -20px; /* Adjust the right distance as needed */
+  position: absolute;
+}
+
+.social-links a {
+  text-decoration: none;
+  background-color: #EEEEEE;
+  font-weight: bold;
+}
+
+.ant-layout {
+  margin: auto;
+  padding: 0;
+  max-width: 1024px;
+  background: transparent !important;
+}
+
+.ant-layout-footer {
+  background: transparent !important;
+}
+
+.title-bg {
+  background-color: #EEEEEE;
+  color: #fff !important;
+  font-size: 14px !important;
+
+  padding: 0px;
+}
+
+.title-right-bg {
+  background: #EEEEEE !important;
+  text-decoration: underline;
+}
+
+.left-card {
+  border-radius: 0px;
+}
+.left-card .ant-card-head {
+  border-radius: 0px;
+  border-bottom: 0px;
+  background-color: #EEEEEE;
+  color: #fff !important;
+  min-height: 40px;
+  font-size: 25px;
+  padding-left: 10px;
+}
+.left-card .ant-card-body {
+  padding: 5px 10px 2px;
+  background-color: #EEEEEE;
+  
+}
+
+.custom-row {
+  background-color: #EEEEEE;
+  margin: 0;
+  margin-top: 60px;
+  padding-bottom: 10px;
+  font-size: 10px;
+  border: 2px gray;
+  border-radius: 5px;
+}
+.custom-row .sign-in-link {
+  color:black;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.right-aligned-col {
+  text-align: right;
+}
+
+.right-card {
+  border-radius: 0px;
+  width: 600px;
+}
+.right-card .ant-card-head {
+  border-radius: 0px;
+  border-bottom: 0px;
+  background-color: lightgray;
+  color: #fff !important;
+  min-height: 20px;
+  font-size: 25px;
+  padding-left: 10px;
+  border: 1px solid black
+}
+.right-card .ant-card-body {
+  padding: 4px 10px 1px;
+  border: 1px solid black;
+  height:120px;
+ 
+}
+
+.link {
+  font-weight: bold;
+  font-size: 50px;
+  margin-top: 10px;
+  color:black;
+}
+
+#root {
+  margin-top: 40px;
+}
+
+#my-card {
+  color:black;
+}
+
+#text1 {
+  color: yellow;
+  font-weight: bolder;
+  font-size: 50px;
+}
+
+#text2 {
+  color: white;
+  font-size: 15px;
+}
+
+#title1 {
+  font-weight: bold;
+  font-size: 15px;
+  white-space: nowrap;
+  text-decoration: underline;
+}/*# sourceMappingURL=main.css.map */
+
+.left-card {
+  /* Your custom styling here */
+  /* For example, you can set background color, padding, etc. */
+  background-color: #EEEEEE;
+
+
+}
+.right-card{
+  background-color: #EEEEEE;
+}
+.cell {
+  width: 50px;
+  height: 40px;
+  border: 1px solid #ccc;
+}
+
+
+/* YourCardStyles.css */
+
+.table-container {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px black;
+  margin-left: 10px;
+}
+
+.table-row {
+  display: table-row;
+  border: 1px solid black;
+}
+
+.table-cell {
+  display: table-cell;
+  padding: 8px;
+  border: 1px  black;
+  
+}
+
+.ant-row {
+  background-color: #EEEEEE;
+}
+
+#root
+{
+  background-color: #EEEEEE;
+}
+
+html {
+  background-color: #EEEEEE;
+  margin:0;
+}
+
+.ant-input-wrapper {
+  background-color: #EEEEEE;
+
+}
+
+.ant-input {
+  background-color: #EEEEEE;
+  font-size:10px;
+  font-weight: bolder;
+  border: 1px solid black;
+}
+.ant-btn {
+  background-color: #EEEEEE;
+  
+}
+
+.left-card  {
+  border: 1px solid black;
+}
+
+.des {
+  color:black;
+}
+
+#nft-link {
+  font-size: 9px;
+  margin-top: 0.25em;
+  color: black;
+  font-weight:400;
+}
+
+.ant-card-head-title {
+  text-decoration: underline;
+  color:black;
+  font-size: 10px;
+  padding:0px;
+}
+
+.table-cell {
+  display: table-cell;
+  padding: 8px;
+  border: 1px solid black;
+  font-size: 10px;
+  padding:0px;
+  width: 40px;
+  font-weight: bold;
+
+}
+
+.table-cell + .table-cell {
+  border-left: none; /* Add this line to remove border between adjacent cells */
+  border: 1px solid black;
+  font-size: 10px;
+  padding:0px;
+  margin-top:1px;
+  width: 40px;
+}
+
+
+#numbering {
+  
+}
+
+
+.card-number {
+  margin-right: 6px;
+  
+  
+}
+
+.table-cell1 {
+  display: table-cell;
+  padding: 8px;
+  border: 1px solid black;
+  font-size: 10px;
+  padding:0px;
+  width: 20px;
+  
+}
+
+
+#technology-id {
+  text-decoration: underline;
+  font-size: 10px;
+}
+
+
+#category-id {
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.ant-btn {
+  border: 0;
+  background-color: transparent;
+}
+
+.ant-space-item 
+{
+  margin-top: -10px;
+}
+
