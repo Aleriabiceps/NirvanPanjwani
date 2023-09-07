@@ -24,12 +24,17 @@ export default function Contents () {
     }
     return <Layout>
        <Layout.Header>
-  <Image src="https://gcdnb.pbrd.co/images/LnqxLZERJBjE.png?o=1" alt="Logo" width={500} className="logo" />
+       <img
+  src="https://gcdnb.pbrd.co/images/LnqxLZERJBjE.png?o=1"
+  width={500}
+  className="logo"
+  style={{ float: "left", marginRight: "20px" }} // Use float and marginRight
+/>
   <div className="social-links">
     <a href="https://www.instagram.com/nirvan/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>
       Instagram
     </a>
-    <a href="https://twitter.com/nirvanpanj" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>
+    <a href="https://twitter.com/nirvanpanj/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>
       Twitter
     </a>
     <a href="https://www.linkedin.com/in/nirvanp/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>
@@ -64,12 +69,12 @@ export default function Contents () {
         <Layout.Content>
         <Row className="custom-row" gutter={[12, 12]}>
   <Col xs={24}>
-    <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+  <div style={{ display: 'flex', justifyContent: 'space-between' }}>
       <div>
-        <strong>Welcome, Guest</strong> <a href="#" className="sign-in-link">[Sign in]</a>
+        <strong>Welcome, Guest</strong> 
       </div>
       <div>
-        <strong>Get a free home page</strong> <RightCircleOutlined />
+        <strong>Drop a visor note</strong> <RightCircleOutlined />
       </div>
     </div>
   </Col>
@@ -78,7 +83,7 @@ export default function Contents () {
 <Row gutter={12}>
     <Col xs={24} sm={24} md={12} lg={8}>
     <Card bordered={false} id="my-card" className={isMobile ? 'mobile-card' : ''}>
-    <Row gutter={[16, 16]}>
+    <Row gutter={[16, 16]} style={{ borderRadius: '1px' }}>
       <Col xs={24} sm={24} md={12} lg={8}>
         <Space align={isMobile ? 'center' : 'start'} style={{ textAlign: isMobile ? 'center' : 'left' }}>
           <img
@@ -264,13 +269,15 @@ export default function Contents () {
       <Col xs={24} sm={8}>
         <Row gutter={12}>
           <Col span={24}>
-          <Card className="right-card" title="News and Notable" bordered={false}>
+          <Card className="right-card" title=" About Me" bordered={false}>
     {/* Content for News and Notable */}
     <Row gutter={[16, 16]}>
         <Col xs={24} md={24}>
             <Space direction="vertical">
-                <Typography.Link className="link">Microsoft FrontPage 2000</Typography.Link>
-                <Typography.Text>Microsoft FrontPage (full name Microsoft Office FrontPage) is a discontinued WYSIWYG HTML editor and website administration tool from Microsoft for the Microsoft Windows line of operating systems. It was branded as part of the Microsoft Office suite from 1997 to 2003.</Typography.Text>
+                {/* <Typography.Link className="link">Microsoft FrontPage 2000</Typography.Link> */}
+                <Typography.Text>I'm a serial entrepreneur and business strategist with a proven track record in various sectors, from gaming to STEM education.</Typography.Text>
+                <Typography.Text> My expertise lies in business development, product management, and growth hacking, with a focus on leveraging data analytics and community engagement. </Typography.Text>
+                <Typography.Text> I’m currently a double major in Applied Math + Stats and Finance @ Emory University, in Atlanta, Georgia. Looking for opportunities to bring my unique blend of skills and experience to forward-thinking companies or projects. Feel free to connect.</Typography.Text>
             </Space>
         </Col>
         {/* You can add more items like the one above if needed */}
@@ -278,13 +285,15 @@ export default function Contents () {
 </Card>
           </Col>
           <Col span={24}>
-          <Card className="right-card" title="News and Notable" bordered={false}>
+          <Card className="right-card" title="Contact Me" bordered={false}>
     {/* Content for News and Notable */}
     <Row gutter={[16, 16]}>
         <Col xs={24} md={24}>
             <Space direction="vertical">
-                <Typography.Link className="link">Microsoft FrontPage 2000</Typography.Link>
-                <Typography.Text>Microsoft FrontPage (full name Microsoft Office FrontPage) is a discontinued WYSIWYG HTML editor and website administration tool from Microsoft for the Microsoft Windows line of operating systems. It was branded as part of the Microsoft Office suite from 1997 to 2003.</Typography.Text>
+             
+                <Typography.Link>https://linkedin.com/nirvanp</Typography.Link>
+                <Typography.Text>908-858-0369</Typography.Text>
+                <Typography.Text>nirvan.panjwani@gmail.com</Typography.Text>
             </Space>
         </Col>
         {/* You can add more items like the one above if needed */}

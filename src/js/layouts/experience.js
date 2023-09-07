@@ -1,51 +1,171 @@
 import { Card, Col, Layout, Row, Space, Typography, Input } from "antd";
 
 export default function App() {
+  const isMobile = window.innerWidth <= 768; // Define the breakpoint for mobile
+ 
+  if (isMobile) {
+    return null; // Return null to hide the header on mobile
+  }
   return (
     <Layout>
       <Layout.Content>
-        <Row style={{ marginTop: 15 }}>
-          {/* left */}
-          <Col xs={24} sm={24} md={8} style={{ height: "100%" }}>
-            <Row>
-              <Col span={24}>
-                <Card
-                  style={{
-                    backgroundColor: "#EEEEEE",
-                    borderRadius: "0px",
-                    border: "1px solid black",
-                  }}
-                  bordered={false}
-                >
-                  <Row>
-                    <Col span={24}>
-                      <Input
-                        placeholder="Search"
-                        style={{
-                          backgroundColor: "#EEEEEE",
-                          fontSize: "10px",
-                          fontWeight: "bolder",
-                          border: "1px solid black",
-                        }}
-                        prefix={null}
-                      />
-                    </Col>
-                  </Row>
-                </Card>
-              </Col>
-              <Col span={24}></Col>
-            </Row>
+      <Row style={{ marginTop: 15 }}>
+          {/* Left Part */}
+       <Col xs={0} sm={0} md={8}>
+            {/* Add your left part content here */}
+            <div
+  style={{
+    border: "1px solid #000", // Add border styling
+    padding: "10px", // Add padding to create a box
+    marginLeft: "200px",
+    height: "145px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center", // Center the content vertically
+    backgroundColor: "#EEEEEE",
+    
+  }}
+>
+  <img
+    src="https://21044391.fs1.hubspotusercontent-na1.net/hubfs/21044391/New_site/Big%20Time%20Logo.svg" // Replace with the path to your image
+    alt="Your Logo"
+    style={{
+      maxWidth: "100%", // Make sure the image scales within the container
+      maxHeight: "100%", // Prevent the image from overflowing the container
+      width: "auto", // Maintain the aspect ratio
+      height: "auto", // Maintain the aspect ratio
+    }}
+  />
+</div>
+<div
+  style={{
+    border: "1px solid #000", // Add border styling
+    padding: "10px", // Add padding to create a box
+    marginLeft: "200px",
+    height: "145px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center", // Center the content vertically
+    backgroundColor: "#EEEEEE",
+  }}
+>
+  <img
+    src="https://images.squarespace-cdn.com/content/v1/63da6efe2fdb0e6e5759772a/317df4f6-7fed-42fa-b243-abe7e1e32350/studious-logo.png?format=1500w" // Replace with the path to your image
+    alt="Your Logo"
+    style={{
+      maxWidth: "100%", // Make sure the image scales within the container
+      maxHeight: "100%", // Prevent the image from overflowing the container
+      width: "auto", // Maintain the aspect ratio
+      height: "auto", // Maintain the aspect ratio
+    }}
+  />
+</div>
+<div
+  style={{
+    border: "1px solid #000", // Add border styling
+    padding: "10px", // Add padding to create a box
+    marginLeft: "200px",
+    height: "145px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center", // Center the content vertically
+    backgroundColor: "#EEEEEE",
+  }}
+>
+  <img
+    src="https://resellcalendar.com/wp-content/themes/rc/assets/media/logo_light.svg" // Replace with the path to your image
+    alt="Your Logo"
+    style={{
+      maxWidth: "100%", // Make sure the image scales within the container
+      maxHeight: "100%", // Prevent the image from overflowing the container
+      width: "auto", // Maintain the aspect ratio
+      height: "auto", // Maintain the aspect ratio
+    }}
+  />
+</div>
+<div
+  style={{
+    border: "1px solid #000", // Add border styling
+    padding: "10px", // Add padding to create a box
+    marginLeft: "200px",
+    height: "145px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center", // Center the content vertically
+    backgroundColor: "#EEEEEE",
+  }}
+>
+  <img
+    src="https://www.nirvanbrickseek.com/assets/fce655b223c27be8.png" // Replace with the path to your image
+    alt="Your Logo"
+    style={{
+      maxWidth: "100%", // Make sure the image scales within the container
+      maxHeight: "100%", // Prevent the image from overflowing the container
+      width: "auto", // Maintain the aspect ratio
+      height: "auto", // Maintain the aspect ratio
+    }}
+  />
+</div>
+<div
+  style={{
+    border: "1px solid #000", // Add border styling
+    padding: "10px", // Add padding to create a box
+    marginLeft: "200px",
+    height: "145px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center", // Center the content vertically
+    backgroundColor: "#EEEEEE",
+  }}
+>
+  <img
+    src="https://tavern.ai/img/tavern_logo_transparent.svg" // Replace with the path to your image
+    alt="Your Logo"
+    style={{
+      maxWidth: "100%", // Make sure the image scales within the container
+      maxHeight: "100%", // Prevent the image from overflowing the container
+      width: "auto", // Maintain the aspect ratio
+      height: "auto", // Maintain the aspect ratio
+    }}
+  />
+</div>
+<div
+  style={{
+    border: "1px solid #000", // Add border styling
+    padding: "10px", // Add padding to create a box
+    marginLeft: "200px",
+    height: "145px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center", // Center the content vertically
+    backgroundColor: "#EEEEEE",
+  }}
+>
+  <img
+    src="https://librehacks.com/wp-content/uploads/2020/03/cropped-librehack_logo_transparent-1.png" // Replace with the path to your image
+    alt="Your Logo"
+    style={{
+      maxWidth: "100%", // Make sure the image scales within the container
+      maxHeight: "100%", // Prevent the image from overflowing the container
+      width: "auto", // Maintain the aspect ratio
+      height: "auto", // Maintain the aspect ratio
+    }}
+  />
+</div>
+
           </Col>
+         
 
           {/* right */}
           <Col xs={24} sm={24} md={16}>
             <Row>
-              <Col span={24}>
+            <Col span={24}>
                 <Card
                   style={{
                     backgroundColor: "#EEEEEE",
                     borderRadius: "0px",
                     border: "1px solid black",
+                    height:145,
                   }}
                 >
                   <Typography.Text
@@ -75,42 +195,51 @@ export default function App() {
                         color: 'inherit',
                       }}
                     >
-                      Bestudious
+                      Big Time Studios
                     </a>
                   </Typography.Text>
                   <Row>
                     <Col span={12}>
                       <Space direction="vertical">
-                        <Typography.Text
-                          style={{
-                            fontSize: "9px",
-                            marginTop: "20px",
-                            color: "black",
-                            fontWeight: "600",
-                            overflow: "hidden",
-                            textOverflow: "ellipsis",
-                            PaddingTop: "20px",
-                            marginRight: "20px",
-                          }}
-                        >
-                          A non-fungible token (NFT) is a unique digital identifier that is recorded on a blockchain, and is used to certify ownership and authenticity. It cannot be copied, substituted, or subdivided.
-                        </Typography.Text>
+                      {!isMobile && (
+  <Typography.Text
+    style={{
+      fontSize: "9px",
+      marginTop: "20px",
+      color: "black",
+      fontWeight: "600",
+      overflow: "hidden",
+      textOverflow: "ellipsis",
+      paddingTop: "20px", // Fixed capitalization issue
+      marginRight: "20px",
+    }}
+  >
+    Big Time Studios is working on an MMO RPG that takes players across space and time. They raised a $21M Series-A in 2021 and have sold over $100m+ in digital game assets to date.
+  </Typography.Text>
+)}
 
-                        <Typography.Text>
+
+
+
+
+
+
+
+                        {/* <Typography.Text>
                           <span style={{ fontSize: "10px", fontWeight: "bold" }}>Category:</span>{" "}
                           <span style={{ fontSize: "10px" }}>Technology</span>
-                        </Typography.Text>
+                        </Typography.Text> */}
                       </Space>
                     </Col>
-                    <Col span={12}>
-                      <div className="card" style={{ display: "flex", justifyContent: "flex-end" }}>
-                        <div className="table-container" style={{ display: "table", borderCollapse: "collapse", position: "absolute", bottom:7, left: 18, width: "100%", border: "1px solid #000", paddingRight: "20px" }}>
+                    <Col span={12}className="mobile-hidden">
+                      <div className="card" style={{ display: "flex", justifyContent: "flex-end", }}>
+                        <div className="table-container" style={{ display: "table", borderCollapse: "collapse", position: "absolute", bottom:-52, left: 25, width: "100%", border: "1px solid #000", paddingRight: "20px" }}>
                           <div className="table-row" style={{ display: "table-row" }}>
                             <div className="table-cell table-header" style={{ display: "table-cell", padding: "2px", paddingLeft: "1px",border: "1px solid #000", fontWeight: "bold" }}>
                               Start
                             </div>
                             <div className="table-cell1" style={{ display: "table-cell", padding: "3px", paddingLeft: "1px", border: "1px solid #000" }}>
-                              March 2019
+                              October
                             </div>
                           </div>
                           <div className="table-row" style={{ display: "table-row" }}>
@@ -118,7 +247,7 @@ export default function App() {
                               End
                             </div>
                             <div className="table-cell1" style={{ display: "table-cell", padding: "3px", paddingLeft: "1px", border: "1px solid #000" }}>
-                              March 2026
+                             Present
                             </div>
                           </div>
                           <div className="table-row" style={{ display: "table-row" }}>
@@ -126,7 +255,15 @@ export default function App() {
                               Title
                             </div>
                             <div className="table-cell1" style={{ display: "table-cell", padding: "3px", paddingLeft: "1px", border: "1px solid #000" }}>
-                              GamePlay Engineer
+                            Director of Business Development
+                            </div>
+                          </div>
+                          <div className="table-row" style={{ display: "table-row" }}>
+                            <div className="table-cell table-header" style={{ display: "table-cell", padding: "1px", paddingLeft: "1px", border: "1px solid #000", fontWeight: "bold" }}>
+                              Link
+                            </div>
+                            <div className="table-cell1" style={{ display: "table-cell", padding: "3px", paddingLeft: "1px", border: "1px solid #000" }}>
+                              www.asdas
                             </div>
                           </div>
                         </div>
@@ -141,6 +278,7 @@ export default function App() {
                     backgroundColor: "#EEEEEE",
                     borderRadius: "0px",
                     border: "1px solid black",
+                    height:145,
                   }}
                 >
                   <Typography.Text
@@ -160,7 +298,7 @@ export default function App() {
                       borderBottom: "2px solid #000",
                     }}
                   >
-                    <span style={{ marginLeft: '2px' }}>1 - |</span>
+                    <span style={{ marginLeft: '2px' }}>2 - |</span>
                     <a
                       href="#"
                       style={{
@@ -170,7 +308,7 @@ export default function App() {
                         color: 'inherit',
                       }}
                     >
-                      Bestudious
+                      Studious
                     </a>
                   </Typography.Text>
                   <Row>
@@ -188,24 +326,24 @@ export default function App() {
                             marginRight: "20px",
                           }}
                         >
-                          A non-fungible token (NFT) is a unique digital identifier that is recorded on a blockchain, and is used to certify ownership and authenticity. It cannot be copied, substituted, or subdivided.
+                          Studious uses cognitive science and AI to make studying for standardized exams as easy as 20 minutes a day.
                         </Typography.Text>
 
-                        <Typography.Text>
+                        {/* <Typography.Text>
                           <span style={{ fontSize: "10px", fontWeight: "bold" }}>Category:</span>{" "}
                           <span style={{ fontSize: "10px" }}>Technology</span>
-                        </Typography.Text>
+                        </Typography.Text> */}
                       </Space>
                     </Col>
-                    <Col span={12}>
+                    <Col span={12}className="mobile-hidden">
                       <div className="card" style={{ display: "flex", justifyContent: "flex-end" }}>
-                        <div className="table-container" style={{ display: "table", borderCollapse: "collapse", position: "absolute", bottom:7, left: 18, width: "100%", border: "1px solid #000", paddingRight: "20px" }}>
+                        <div className="table-container" style={{ display: "table", borderCollapse: "collapse", position: "absolute", bottom:-74, left: 25, width: "100%", border: "1px solid #000", paddingRight: "20px" }}>
                           <div className="table-row" style={{ display: "table-row" }}>
                             <div className="table-cell table-header" style={{ display: "table-cell", padding: "2px", paddingLeft: "1px",border: "1px solid #000", fontWeight: "bold" }}>
                               Start
                             </div>
                             <div className="table-cell1" style={{ display: "table-cell", padding: "3px", paddingLeft: "1px", border: "1px solid #000" }}>
-                              March 2019
+                            January 2022
                             </div>
                           </div>
                           <div className="table-row" style={{ display: "table-row" }}>
@@ -213,7 +351,7 @@ export default function App() {
                               End
                             </div>
                             <div className="table-cell1" style={{ display: "table-cell", padding: "3px", paddingLeft: "1px", border: "1px solid #000" }}>
-                              March 2026
+                            Present
                             </div>
                           </div>
                           <div className="table-row" style={{ display: "table-row" }}>
@@ -221,7 +359,15 @@ export default function App() {
                               Title
                             </div>
                             <div className="table-cell1" style={{ display: "table-cell", padding: "3px", paddingLeft: "1px", border: "1px solid #000" }}>
-                              GamePlay Engineer
+                            Director of Marketing
+                            </div>
+                          </div>
+                          <div className="table-row" style={{ display: "table-row" }}>
+                            <div className="table-cell table-header" style={{ display: "table-cell", padding: "1px", paddingLeft: "1px", border: "1px solid #000", fontWeight: "bold" }}>
+                              Link
+                            </div>
+                            <div className="table-cell1" style={{ display: "table-cell", padding: "3px", paddingLeft: "1px", border: "1px solid #000" }}>
+                              www.asdas
                             </div>
                           </div>
                         </div>
@@ -236,6 +382,7 @@ export default function App() {
                     backgroundColor: "#EEEEEE",
                     borderRadius: "0px",
                     border: "1px solid black",
+                    height:145,
                   }}
                 >
                   <Typography.Text
@@ -255,7 +402,7 @@ export default function App() {
                       borderBottom: "2px solid #000",
                     }}
                   >
-                    <span style={{ marginLeft: '2px' }}>1 - |</span>
+                    <span style={{ marginLeft: '2px' }}>3 - |</span>
                     <a
                       href="#"
                       style={{
@@ -265,7 +412,7 @@ export default function App() {
                         color: 'inherit',
                       }}
                     >
-                      Bestudious
+                      Resell Calendar
                     </a>
                   </Typography.Text>
                   <Row>
@@ -283,24 +430,24 @@ export default function App() {
                             marginRight: "20px",
                           }}
                         >
-                          A non-fungible token (NFT) is a unique digital identifier that is recorded on a blockchain, and is used to certify ownership and authenticity. It cannot be copied, substituted, or subdivided.
+                         Resell Calendar is the #1 news source for resellers. Discover goods, keep on top of latest trends, and make them big bucks — buy low, sell high. Resell Calendar purchased Nirvan’s Brickseek in 2022 for a 6 figure sum.
                         </Typography.Text>
 
-                        <Typography.Text>
+                        {/* <Typography.Text>
                           <span style={{ fontSize: "10px", fontWeight: "bold" }}>Category:</span>{" "}
                           <span style={{ fontSize: "10px" }}>Technology</span>
-                        </Typography.Text>
+                        </Typography.Text> */}
                       </Space>
                     </Col>
-                    <Col span={12}>
+                    <Col span={12}className="mobile-hidden">
                       <div className="card" style={{ display: "flex", justifyContent: "flex-end" }}>
-                        <div className="table-container" style={{ display: "table", borderCollapse: "collapse", position: "absolute", bottom:7, left: 18, width: "100%", border: "1px solid #000", paddingRight: "20px" }}>
+                        <div className="table-container" style={{ display: "table", borderCollapse: "collapse", position: "absolute", bottom:-52, left: 25, width: "100%", border: "1px solid #000", paddingRight: "20px" }}>
                           <div className="table-row" style={{ display: "table-row" }}>
                             <div className="table-cell table-header" style={{ display: "table-cell", padding: "2px", paddingLeft: "1px",border: "1px solid #000", fontWeight: "bold" }}>
                               Start
                             </div>
                             <div className="table-cell1" style={{ display: "table-cell", padding: "3px", paddingLeft: "1px", border: "1px solid #000" }}>
-                              March 2019
+                            June 2020
                             </div>
                           </div>
                           <div className="table-row" style={{ display: "table-row" }}>
@@ -308,7 +455,7 @@ export default function App() {
                               End
                             </div>
                             <div className="table-cell1" style={{ display: "table-cell", padding: "3px", paddingLeft: "1px", border: "1px solid #000" }}>
-                              March 2026
+                            August 2022
                             </div>
                           </div>
                           <div className="table-row" style={{ display: "table-row" }}>
@@ -316,7 +463,15 @@ export default function App() {
                               Title
                             </div>
                             <div className="table-cell1" style={{ display: "table-cell", padding: "3px", paddingLeft: "1px", border: "1px solid #000" }}>
-                              GamePlay Engineer
+                            Managing Partner
+                            </div>
+                          </div>
+                          <div className="table-row" style={{ display: "table-row" }}>
+                            <div className="table-cell table-header" style={{ display: "table-cell", padding: "1px", paddingLeft: "1px", border: "1px solid #000", fontWeight: "bold" }}>
+                              Link
+                            </div>
+                            <div className="table-cell1" style={{ display: "table-cell", padding: "3px", paddingLeft: "1px", border: "1px solid #000" }}>
+                              www.asdas
                             </div>
                           </div>
                         </div>
@@ -331,6 +486,7 @@ export default function App() {
                     backgroundColor: "#EEEEEE",
                     borderRadius: "0px",
                     border: "1px solid black",
+                    height:145,
                   }}
                 >
                   <Typography.Text
@@ -350,7 +506,7 @@ export default function App() {
                       borderBottom: "2px solid #000",
                     }}
                   >
-                    <span style={{ marginLeft: '2px' }}>1 - |</span>
+                    <span style={{ marginLeft: '2px' }}>4 - |</span>
                     <a
                       href="#"
                       style={{
@@ -360,7 +516,7 @@ export default function App() {
                         color: 'inherit',
                       }}
                     >
-                      Bestudious
+                      Nirvan’s Brickseek
                     </a>
                   </Typography.Text>
                   <Row>
@@ -378,24 +534,24 @@ export default function App() {
                             marginRight: "20px",
                           }}
                         >
-                          A non-fungible token (NFT) is a unique digital identifier that is recorded on a blockchain, and is used to certify ownership and authenticity. It cannot be copied, substituted, or subdivided.
+                         Nirvan’s Brickseek is a community for reselling limited items, coupons/deals, and other educational resources for creating 2nd streams of income.
                         </Typography.Text>
 
-                        <Typography.Text>
+                        {/* <Typography.Text>
                           <span style={{ fontSize: "10px", fontWeight: "bold" }}>Category:</span>{" "}
                           <span style={{ fontSize: "10px" }}>Technology</span>
-                        </Typography.Text>
+                        </Typography.Text> */}
                       </Space>
                     </Col>
-                    <Col span={12}>
+                    <Col span={12}className="mobile-hidden">
                       <div className="card" style={{ display: "flex", justifyContent: "flex-end" }}>
-                        <div className="table-container" style={{ display: "table", borderCollapse: "collapse", position: "absolute", bottom:7, left: 18, width: "100%", border: "1px solid #000", paddingRight: "20px" }}>
+                        <div className="table-container" style={{ display: "table", borderCollapse: "collapse", position: "absolute", bottom:-74, left: 25, width: "100%", border: "1px solid #000", paddingRight: "20px" }}>
                           <div className="table-row" style={{ display: "table-row" }}>
                             <div className="table-cell table-header" style={{ display: "table-cell", padding: "2px", paddingLeft: "1px",border: "1px solid #000", fontWeight: "bold" }}>
                               Start
                             </div>
                             <div className="table-cell1" style={{ display: "table-cell", padding: "3px", paddingLeft: "1px", border: "1px solid #000" }}>
-                              March 2019
+                            Jan 2020
                             </div>
                           </div>
                           <div className="table-row" style={{ display: "table-row" }}>
@@ -403,7 +559,7 @@ export default function App() {
                               End
                             </div>
                             <div className="table-cell1" style={{ display: "table-cell", padding: "3px", paddingLeft: "1px", border: "1px solid #000" }}>
-                              March 2026
+                            August 2022
                             </div>
                           </div>
                           <div className="table-row" style={{ display: "table-row" }}>
@@ -411,7 +567,15 @@ export default function App() {
                               Title
                             </div>
                             <div className="table-cell1" style={{ display: "table-cell", padding: "3px", paddingLeft: "1px", border: "1px solid #000" }}>
-                              GamePlay Engineer
+                            Founder
+                            </div>
+                          </div>
+                          <div className="table-row" style={{ display: "table-row" }}>
+                            <div className="table-cell table-header" style={{ display: "table-cell", padding: "1px", paddingLeft: "1px", border: "1px solid #000", fontWeight: "bold" }}>
+                              Link
+                            </div>
+                            <div className="table-cell1" style={{ display: "table-cell", padding: "3px", paddingLeft: "1px", border: "1px solid #000" }}>
+                              www.asdas
                             </div>
                           </div>
                         </div>
@@ -426,6 +590,7 @@ export default function App() {
                     backgroundColor: "#EEEEEE",
                     borderRadius: "0px",
                     border: "1px solid black",
+                    height:145,
                   }}
                 >
                   <Typography.Text
@@ -445,7 +610,7 @@ export default function App() {
                       borderBottom: "2px solid #000",
                     }}
                   >
-                    <span style={{ marginLeft: '2px' }}>1 - |</span>
+                    <span style={{ marginLeft: '2px' }}>5 - |</span>
                     <a
                       href="#"
                       style={{
@@ -455,7 +620,7 @@ export default function App() {
                         color: 'inherit',
                       }}
                     >
-                      Bestudious
+                      Tavern
                     </a>
                   </Typography.Text>
                   <Row>
@@ -473,24 +638,24 @@ export default function App() {
                             marginRight: "20px",
                           }}
                         >
-                          A non-fungible token (NFT) is a unique digital identifier that is recorded on a blockchain, and is used to certify ownership and authenticity. It cannot be copied, substituted, or subdivided.
+                          Tavern revolutionizes the proxy purchasing experience by making it social and interactive.
                         </Typography.Text>
 
-                        <Typography.Text>
+                        {/* <Typography.Text>
                           <span style={{ fontSize: "10px", fontWeight: "bold" }}>Category:</span>{" "}
                           <span style={{ fontSize: "10px" }}>Technology</span>
-                        </Typography.Text>
+                        </Typography.Text> */}
                       </Space>
                     </Col>
-                    <Col span={12}>
+                    <Col span={12}className="mobile-hidden">
                       <div className="card" style={{ display: "flex", justifyContent: "flex-end" }}>
-                        <div className="table-container" style={{ display: "table", borderCollapse: "collapse", position: "absolute", bottom:7, left: 18, width: "100%", border: "1px solid #000", paddingRight: "20px" }}>
+                        <div className="table-container" style={{ display: "table", borderCollapse: "collapse", position: "absolute", bottom:-74, left: 25, width: "100%", border: "1px solid #000", paddingRight: "20px" }}>
                           <div className="table-row" style={{ display: "table-row" }}>
                             <div className="table-cell table-header" style={{ display: "table-cell", padding: "2px", paddingLeft: "1px",border: "1px solid #000", fontWeight: "bold" }}>
                               Start
                             </div>
                             <div className="table-cell1" style={{ display: "table-cell", padding: "3px", paddingLeft: "1px", border: "1px solid #000" }}>
-                              March 2019
+                            December 2021
                             </div>
                           </div>
                           <div className="table-row" style={{ display: "table-row" }}>
@@ -498,7 +663,7 @@ export default function App() {
                               End
                             </div>
                             <div className="table-cell1" style={{ display: "table-cell", padding: "3px", paddingLeft: "1px", border: "1px solid #000" }}>
-                              March 2026
+                            August 2022
                             </div>
                           </div>
                           <div className="table-row" style={{ display: "table-row" }}>
@@ -506,7 +671,15 @@ export default function App() {
                               Title
                             </div>
                             <div className="table-cell1" style={{ display: "table-cell", padding: "3px", paddingLeft: "1px", border: "1px solid #000" }}>
-                              GamePlay Engineer
+                            Founder
+                            </div>
+                          </div>
+                          <div className="table-row" style={{ display: "table-row" }}>
+                            <div className="table-cell table-header" style={{ display: "table-cell", padding: "1px", paddingLeft: "1px", border: "1px solid #000", fontWeight: "bold" }}>
+                              Link
+                            </div>
+                            <div className="table-cell1" style={{ display: "table-cell", padding: "3px", paddingLeft: "1px", border: "1px solid #000" }}>
+                              www.asdas
                             </div>
                           </div>
                         </div>
@@ -515,6 +688,114 @@ export default function App() {
                   </Row>
                 </Card>
               </Col>
+              <Col span={24}>
+                <Card
+                  style={{
+                    backgroundColor: "#EEEEEE",
+                    borderRadius: "0px",
+                    border: "1px solid black",
+                    height:145,
+                  }}
+                >
+                  <Typography.Text
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      right: 0,
+                      width: "100%",
+                      backgroundColor: "rgb(238, 238, 238)",
+                      color: "Black",
+                      padding: "1px",
+                      marginLeft: "50px",
+                      fontSize: "14px",
+                      fontWeight: "bold",
+                      borderTopLeftRadius: "4px",
+                      borderTopRightRadius: "4px",
+                      borderBottom: "2px solid #000",
+                    }}
+                  >
+                    <span style={{ marginLeft: '2px' }}>6 - |</span>
+                    <a
+                      href="#"
+                      style={{
+                        marginLeft: '10px',
+                        textDecoration: 'underline',
+                        cursor: 'pointer',
+                        color: 'inherit',
+                      }}
+                    >
+                      Librehacks
+
+
+                    </a>
+                  </Typography.Text>
+                  <Row>
+                    <Col span={12}>
+                      <Space direction="vertical">
+                        <Typography.Text
+                          style={{
+                            fontSize: "9px",
+                            marginTop: "20px",
+                            color: "black",
+                            fontWeight: "600",
+                            overflow: "hidden",
+                            textOverflow: "ellipsis",
+                            PaddingTop: "20px",
+                            marginRight: "20px",
+                          }}
+                        >
+                          A certified 501(c)(3) non-profit with the goal of encouraging stem education in low-income schools.
+                        </Typography.Text>
+
+                        {/* <Typography.Text>
+                          <span style={{ fontSize: "10px", fontWeight: "bold" }}>Category:</span>{" "}
+                          <span style={{ fontSize: "10px" }}>Technology</span>
+                        </Typography.Text> */}
+                      </Space>
+                    </Col>
+                    <Col span={12}className="mobile-hidden">
+                      <div className="card" style={{ display: "flex", justifyContent: "flex-end" }}>
+                        <div className="table-container" style={{ display: "table", borderCollapse: "collapse", position: "absolute", bottom:-75, left: 25, width: "100%", border: "1px solid #000", paddingRight: "20px" }}>
+                          <div className="table-row" style={{ display: "table-row" }}>
+                            <div className="table-cell table-header" style={{ display: "table-cell", padding: "2px", paddingLeft: "1px",border: "1px solid #000", fontWeight: "bold" }}>
+                              Start
+                            </div>
+                            <div className="table-cell1" style={{ display: "table-cell", padding: "3px", paddingLeft: "1px", border: "1px solid #000" }}>
+                            February 2020
+                            </div>
+                          </div>
+                          <div className="table-row" style={{ display: "table-row" }}>
+                            <div className="table-cell table-header" style={{ display: "table-cell", padding: "3px", paddingLeft: "1px", border: "1px solid #000", fontWeight: "bold" }}>
+                              End
+                            </div>
+                            <div className="table-cell1" style={{ display: "table-cell", padding: "3px", paddingLeft: "1px", border: "1px solid #000" }}>
+                            Present
+                            </div>
+                          </div>
+                          <div className="table-row" style={{ display: "table-row" }}>
+                            <div className="table-cell table-header" style={{ display: "table-cell", padding: "1px", paddingLeft: "1px", border: "1px solid #000", fontWeight: "bold" }}>
+                              Title
+                            </div>
+                            <div className="table-cell1" style={{ display: "table-cell", padding: "3px", paddingLeft: "1px", border: "1px solid #000" }}>
+                            Board Member
+                            </div>
+                          </div>
+                          <div className="table-row" style={{ display: "table-row" }}>
+                            <div className="table-cell table-header" style={{ display: "table-cell", padding: "1px", paddingLeft: "1px", border: "1px solid #000", fontWeight: "bold" }}>
+                              Link
+                            </div>
+                            <div className="table-cell1" style={{ display: "table-cell", padding: "3px", paddingLeft: "1px", border: "1px solid #000" }}>
+                              www.asdas
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </Col>
+                  </Row>
+                </Card>
+              </Col>
+              
+              
             </Row>
           </Col>
         </Row>
