@@ -10,7 +10,7 @@ export default function App() {
     <Layout>
        <Col span={24} style={{ textAlign: 'center', marginTop: '16px' }}>
           {/* Home Button */}
-          <Link to="/home"> {/* Assuming you have a route for your home page */}
+          <Link to="/"> {/* Assuming you have a route for your home page */}
             <Button type="default">Home</Button>
           </Link>
           {/* Experience Button */}

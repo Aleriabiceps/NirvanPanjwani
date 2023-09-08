@@ -11,7 +11,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route exact path="/home" element={<Contents />} />
+        <Route exact path="/" element={<Contents />} />
         <Route exact path="/experience" element={<Experience />} />
         <Route exact path="/blog1" element={<Blog />} /> {/* Add a new route for the Blog component */}
       </Routes>

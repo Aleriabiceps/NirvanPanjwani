@@ -16,7 +16,7 @@ const BlogPostContainer = styled.div`
 const CustomCard = styled(Card)`
   width: 80%;
   max-width: 800px;
-  margin-bottom: 300px;
+  margin-bottom: 400px;
 `;
 
 const CustomTitle = styled(Typography.Title)`
@@ -63,7 +63,7 @@ const BlogPost = () => (
         </Col>
         <Col span={24} style={{ textAlign: 'center', marginTop: '16px' }}>
           {/* Home Button */}
-          <Link to="/home"> {/* Assuming you have a route for your home page */}
+          <Link to="/"> {/* Assuming you have a route for your home page */}
             <Button type="default">Home</Button>
           </Link>
           {/* Experience Button */}
