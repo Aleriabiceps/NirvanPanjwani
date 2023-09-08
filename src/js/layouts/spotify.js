@@ -2,6 +2,7 @@ import { Card, Col, Image, Layout, Row, Space, Typography, } from "antd";
 import React from "react";
 import { RightCircleOutlined } from '@ant-design/icons';
 import { Link } from "react-router-dom";
+import blogData from './Blog'; // Import the data from Blog.js
 
 
 
@@ -34,10 +35,10 @@ export default function Contents () {
     <a href="https://www.instagram.com/nirvan/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>
       Instagram
     </a>
-    <a href="https://twitter.com/nirvanpanj/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>
+    <a href="https://twitter.com/nirvanpanj" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>
       Twitter
     </a>
-    <a href="https://www.linkedin.com/in/nirvanp/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>
+    <a href="https://linkedin.com/in/nirvanp" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>
       LinkedIn
     </a>
     <a href="https://open.spotify.com/user/legon12345" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>
@@ -182,84 +183,57 @@ export default function Contents () {
     <Row gutter={[16, 16]}>
         <Col xs={24} sm={12} md={8}>
             <Space direction="vertical">
-                <Typography.Link id="title1">Digital Marketing Manager</Typography.Link>
-                <Typography.Text>Oversee online marketing strategies for businesses</Typography.Text>
+                <Typography.Link id="title1">Big Time Studios</Typography.Link>
+                <Typography.Text>Business Development</Typography.Text>
             </Space>
         </Col>
         <Col xs={24} sm={12} md={8}>
             <Space direction="vertical">
-                <Typography.Link id="title1">Social Media Manager:</Typography.Link>
-                <Typography.Text>Focus specifically on creating content for social media platforms. </Typography.Text>
+                <Typography.Link id="title1">Studious</Typography.Link>
+                <Typography.Text>	Director of Marketing </Typography.Text>
             </Space>
         </Col>
         <Col xs={24} sm={12} md={8}>
             <Space direction="vertical">
-                <Typography.Link id="title1">Content Specialist:</Typography.Link>
-                <Typography.Text>Creating high-quality content, such as blog posts and infographics.</Typography.Text>
+                <Typography.Link id="title1">Resell Calendar</Typography.Link>
+                <Typography.Text>Managing Partner</Typography.Text>
             </Space>
         </Col>
         <Col xs={24} sm={12} md={8}>
             <Space direction="vertical">
-                <Typography.Link id="title1">SEO Specialist:</Typography.Link>
-                <Typography.Text>Improve a website's visibility in search engine results. </Typography.Text>
+                <Typography.Link id="title1">Nirvan’s Brickseek</Typography.Link>
+                <Typography.Text>Founder</Typography.Text>
             </Space>
         </Col>
         <Col xs={24} sm={12} md={8}>
             <Space direction="vertical">
-                <Typography.Link id="title1">Email Manager</Typography.Link>
-                <Typography.Text>Design and execute email marketing campaigns.</Typography.Text>
+                <Typography.Link id="title1">Tavern</Typography.Link>
+                <Typography.Text>Founder</Typography.Text>
             </Space>
         </Col>
         <Col xs={24} sm={12} md={8}>
             <Space direction="vertical">
-                <Typography.Link id="title1">Marketing Manager</Typography.Link>
-                <Typography.Text>Specialize in promoting products or services sold through online platforms. </Typography.Text>
+                <Typography.Link id="title1">Librehacks</Typography.Link>
+                <Typography.Text>Board Member </Typography.Text>
             </Space>
         </Col>
     </Row>
 </Card>
           </Col>
           <Col span={24}>
-          <Card className="left-card" title={<Link to="/Blog">Blog</Link>} bordered={false}>
+          <Card className="left-card" title={<Link to="/Blog1">Blog</Link>} bordered={false}>
     {/* Content for Blog */}
     <Row gutter={[16, 16]}>
-        <Col xs={24} sm={12} md={8}>
-            <Space direction="vertical">
-                <Typography.Link id="title1">Digital Marketing Manager</Typography.Link>
-                <Typography.Text>Oversee online marketing strategies for businesses</Typography.Text>
-            </Space>
-        </Col>
-        <Col xs={24} sm={12} md={8}>
-            <Space direction="vertical">
-                <Typography.Link id="title1">Social Media Manager:</Typography.Link>
-                <Typography.Text>Focus specifically on creating content for social media platforms. </Typography.Text>
-            </Space>
-        </Col>
-        <Col xs={24} sm={12} md={8}>
-            <Space direction="vertical">
-                <Typography.Link id="title1">Content Specialist:</Typography.Link>
-                <Typography.Text>Creating high-quality content, such as blog posts and infographics.</Typography.Text>
-            </Space>
-        </Col>
-        <Col xs={24} sm={12} md={8}>
-            <Space direction="vertical">
-                <Typography.Link id="title1">SEO Specialist:</Typography.Link>
-                <Typography.Text>Improve a website's visibility in search engine results. </Typography.Text>
-            </Space>
-        </Col>
-        <Col xs={24} sm={12} md={8}>
-            <Space direction="vertical">
-                <Typography.Link id="title1">Email Manager</Typography.Link>
-                <Typography.Text>Design and execute email marketing campaigns.</Typography.Text>
-            </Space>
-        </Col>
-        <Col xs={24} sm={12} md={8}>
-            <Space direction="vertical">
-                <Typography.Link id="title1">Marketing Manager</Typography.Link>
-                <Typography.Text>Specialize in promoting products or services sold through online platforms. </Typography.Text>
-            </Space>
-        </Col>
-    </Row>
+  {blogData.slice(0, 6).map((item, index) => (
+    <Col xs={24} sm={12} md={8} key={index}>
+      <Space direction="vertical">
+        <Typography.Link id={`title${index}`} style={{ fontWeight: 'bold' }}>{item.title}</Typography.Link>
+        <Typography.Text>{item.description}</Typography.Text>
+      </Space>
+    </Col>
+  ))}
+</Row>
+
 </Card>
           </Col>
         </Row>

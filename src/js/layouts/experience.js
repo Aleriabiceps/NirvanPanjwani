@@ -1,5 +1,5 @@
-import { Card, Col, Layout, Row, Space, Typography, Input } from "antd";
-
+import { Card, Row, Col, Typography, Space, List, Avatar, Button, Tooltip, Layout } from 'antd';
+import { Link } from 'react-router-dom';
 export default function App() {
   const isMobile = window.innerWidth <= 768; // Define the breakpoint for mobile
  
@@ -8,7 +8,18 @@ export default function App() {
   }
   return (
     <Layout>
+       <Col span={24} style={{ textAlign: 'center', marginTop: '16px' }}>
+          {/* Home Button */}
+          <Link to="/home"> {/* Assuming you have a route for your home page */}
+            <Button type="default">Home</Button>
+          </Link>
+          {/* Experience Button */}
+          <Link to="/blog1"> {/* Assuming you have a route for your home page */}
+            <Button type="default">Blog</Button>
+          </Link>
+        </Col>
       <Layout.Content>
+     
       <Row style={{ marginTop: 15 }}>
           {/* Left Part */}
        <Col xs={0} sm={0} md={8}>
@@ -196,6 +207,7 @@ export default function App() {
                       }}
                     >
                       Big Time Studios
+                      
                     </a>
                   </Typography.Text>
                   <Row>
@@ -798,7 +810,9 @@ export default function App() {
               
             </Row>
           </Col>
+          
         </Row>
+        
       </Layout.Content>
     </Layout>
   );

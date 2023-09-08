@@ -1,108 +1,40 @@
-import React from "react";
-import { Card, Col } from "antd";
+// Blog.js
 
-const blogPostContainerStyle = {
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  height: "100vh", // This makes it take up the full viewport height
+import React from 'react';
 
-  
-};
+const blogData = [
+  {
+    title: 'Big Time Studios',
+    description: 'Amazing Game Studio',
+    externalUrl: 'https://coincu.com/74508-interview-big-time/'
+  },
+  {
+    title: 'Facebook',
+    description: 'Facebook Meta',
+    externalUrl: 'https://www.facebook.com/'
+  },
+  {
+    title: 'Apartment theraphy',
+    description: 'Sample only',
+    externalUrl: 'https://www.apartmenttherapy.com/'
+  },
+  {
+    title: 'Say yes',
+    description: 'BEST BAGUETTE SANDWICH',
+    externalUrl: 'https://sayyes.com/'
+  },
+  {
+    title: 'Bright/Bazaar',
+    description: 'Maintenance Hacks',
+    externalUrl: 'https://www.brightbazaarblog.com/'
+  },
+  {
+    title: 'Cup of Joy',
+    description: 'Back-To-School Vibes',
+    externalUrl: 'https://cupofjo.com/'
+  },
 
-const BlogPost = () => {
-  return (
-    <div className="blog-post-container25" style={blogPostContainerStyle}>
-      <Card style={{ marginTop: -150, border: "none" }}>
-        <Col span={24}>
-          <h2>Blog Posts</h2>
-        </Col>
-        <ul>
-        <li>
-          <a href="#">Assess the Strength of Your CFA Prep</a>
-        </li>
-        <li>
-          <a href="#">5 Must-Know Learning Strategies</a>
-        </li>
-        <li>
-          <a href="#">Time-Saving CFA Level I Prep</a>
-        </li>
-        <li>
-          <a href="#">Assess the Strength of Your CFA Prep</a>
-        </li>
-        <li>
-          <a href="#">5 Must-Know Learning Strategies</a>
-        </li>
-        <li>
-          <a href="#">Time-Saving CFA Level I Prep</a>
-        </li>
-        <li>
-          <a href="#">Assess the Strength of Your CFA Prep</a>
-        </li>
-        <li>
-          <a href="#">5 Must-Know Learning Strategies</a>
-        </li>
-        <li>
-          <a href="#">Time-Saving CFA Level I Prep</a>
-        </li>
-        <li>
-          <a href="#">Assess the Strength of Your CFA Prep</a>
-        </li>
-        <li>
-          <a href="#">5 Must-Know Learning Strategies</a>
-        </li>
-        <li>
-          <a href="#">Time-Saving CFA Level I Prep</a>
-        </li>
-        <li>
-          <a href="#">Assess the Strength of Your CFA Prep</a>
-        </li>
-        <li>
-          <a href="#">5 Must-Know Learning Strategies</a>
-        </li>
-        <li>
-          <a href="#">Time-Saving CFA Level I Prep</a>
-        </li>
-        <li>
-          <a href="#">Assess the Strength of Your CFA Prep</a>
-        </li>
-        <li>
-          <a href="#">5 Must-Know Learning Strategies</a>
-        </li>
-        <li>
-          <a href="#">Time-Saving CFA Level I Prep</a>
-        </li>
-        <li>
-          <a href="#">Assess the Strength of Your CFA Prep</a>
-        </li>
-        <li>
-          <a href="#">5 Must-Know Learning Strategies</a>
-        </li>
-        <li>
-          <a href="#">Time-Saving CFA Level I Prep</a>
-        </li>
-        <li>
-          <a href="#">Assess the Strength of Your CFA Prep</a>
-        </li>
-        <li>
-          <a href="#">5 Must-Know Learning Strategies</a>
-        </li>
-        <li>
-          <a href="#">Time-Saving CFA Level I Prep</a>
-        </li>
-        <li>
-          <a href="#">Assess the Strength of Your CFA Prep</a>
-        </li>
-        <li>
-          <a href="#">5 Must-Know Learning Strategies</a>
-        </li>
-        <li>
-          <a href="#">Time-Saving CFA Level I Prep</a>
-        </li>
-        </ul>
-      </Card>
-    </div>
-  );
-};
+];
 
-export default BlogPost;
+
+export default blogData;

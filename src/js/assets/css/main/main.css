@@ -64,8 +64,13 @@
   padding-left: 10px;
 }
 .left-card .ant-card-body {
-  padding: 15px 24px 15px;
+  padding: 15px 50px 15px;
   background-color: lightyellow;
+}
+
+.leftcard14
+{
+
 }
 
 .custom-row {
@@ -78,7 +83,7 @@
   border: 1px darkgray;
   border-radius: 0px;
   border-bottom: 0px;
-  width: 1030px;
+  
   margin-left: 40px;
 }
 .custom-row .sign-in-link {
@@ -132,7 +137,7 @@
   color: yellow;
   font-weight: bolder;
   font-size: 50px;
-  padding-top:200px;
+ 
 }
 
 #text2 {
