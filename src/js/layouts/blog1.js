@@ -16,6 +16,7 @@ const BlogPostContainer = styled.div`
 const CustomCard = styled(Card)`
   width: 80%;
   max-width: 800px;
+  margin-bottom: 300px;
 `;
 
 const CustomTitle = styled(Typography.Title)`
