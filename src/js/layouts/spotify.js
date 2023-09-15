@@ -1,4 +1,7 @@
-import { Card, Col, Image, Layout, Row, Space, Typography, } from "antd";
+import { Card, Col, Image, Layout, Row, Space, Typography,  } from "antd";
+import { LinkedinOutlined, PhoneOutlined, MailOutlined } from '@ant-design/icons';
+
+
 import React from "react";
 import { RightCircleOutlined } from '@ant-design/icons';
 import { Link } from "react-router-dom";
@@ -18,7 +21,7 @@ const handleInstagramClick = () => {
 };
 
 export default function Contents () {
-    const isMobile = window.innerWidth <= 768; // Define the breakpoint for mobile
+    const isMobile = window.innerWidth <= 480; // Define the breakpoint for mobile
  
     if (isMobile) {
       return null; // Return null to hide the header on mobile
@@ -29,7 +32,7 @@ export default function Contents () {
   src="https://gcdnb.pbrd.co/images/LnqxLZERJBjE.png?o=1"
   width={500}
   className="logo"
-  style={{ float: "left", marginRight: "20px" }} // Use float and marginRight
+  style={{ float: "left", marginRight: "20px", marginTop:"30px" }} // Use float and marginRight
 />
   <div className="social-links">
     <a href="https://www.instagram.com/nirvan/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>
@@ -84,41 +87,50 @@ export default function Contents () {
 <Row gutter={12}>
     <Col xs={24} sm={24} md={12} lg={8}>
     <Card bordered={false} id="my-card" className={isMobile ? 'mobile-card' : ''}>
-    <Row gutter={[16, 16]} style={{ borderRadius: '1px' }}>
-      <Col xs={24} sm={24} md={12} lg={8}>
-        <Space align={isMobile ? 'center' : 'start'} style={{ textAlign: isMobile ? 'center' : 'left' }}>
-          <img
-            src="https://imgs.search.brave.com/6rh1oVZqFsctqMziW_7QwV34purfjgsQUGOWX7d6kJ8/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4u/aWNvbi1pY29ucy5j/b20vaWNvbnMyLzM1/NjkvUE5HLzUxMi9l/dmVudF93YXRjaF9j/bG9ja190aW1lX3Nj/aGVkdWxlX2RhdGVf/Y2FsZW5kYXJfaWNv/bl8yMjU1MDUucG5n"
-            alt="User"
-            style={{ maxWidth: '100px', height: '85px' }}
-          />
+  <Row 
+    gutter={[16, 16]} 
+    style={{ borderRadius: '1px' }} 
+    justify={isMobile ? 'center' : 'start'}
+  >
+    <Col 
+      xs={24} sm={24} md={12} lg={8} 
+      style={{ display: isMobile ? 'flex' : 'block', justifyContent: 'center' }}
+    >
+      <Space align={isMobile ? 'center' : 'start'} style={{ textAlign: isMobile ? 'center' : 'left' }}>
+      <img
+  className={isMobile ? 'mobile-image' : 'web-image'}  // Change class based on isMobile
+  src="https://imgs.search.brave.com/TEX0ewvC9Lw69pioiebxjSnxPDOoPDgQMvHDEChSGQU/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4t/aWNvbnMtcG5nLmZs/YXRpY29uLmNvbS8x/MjgvODU4Ny84NTg3/MTcxLnBuZw"
+  alt="User"
+/>
+
+      </Space>
+    </Col>
+    {!isMobile && (
+      <Col xs={24} sm={24} md={12} lg={16}>
+        <Space direction="vertical">
+          <Typography.Text id="text1" style={{ fontSize: 25 }}>
+            Book Me
+          </Typography.Text>
+          <Typography.Text id="text2">
+            My time is worthless.
+            <span
+              style={{
+                fontSize: '24px',
+                color: 'yellow',
+                marginLeft: '10px',
+                cursor: 'pointer',
+              }}
+              onClick={handleClick}
+            >
+              <RightCircleOutlined />
+            </span>
+          </Typography.Text>
         </Space>
       </Col>
-      {!isMobile && (
-        <Col xs={24} sm={24} md={12} lg={16}>
-          <Space direction="vertical">
-            <Typography.Text id="text1" style={{ fontSize: 25 }}>
-              Book Me
-            </Typography.Text>
-            <Typography.Text id="text2">
-              My time is worthless.{' '}
-              <span
-                style={{
-                  fontSize: '24px',
-                  color: 'yellow',
-                  marginLeft: '10px',
-                  cursor: 'pointer',
-                }}
-                onClick={handleClick}
-              >
-                <RightCircleOutlined />
-              </span>
-            </Typography.Text>
-          </Space>
-        </Col>
-      )}
-    </Row>
-  </Card>
+    )}
+  </Row>
+</Card>
+
     </Col>
     <Col xs={24} sm={8}>
       <Card bordered={false} id="my-card" style={{ height: '140px', paddingTop: 0, paddingBottom: 20 }}>
@@ -142,7 +154,7 @@ export default function Contents () {
           <img
             src="https://imgs.search.brave.com/7z2hpTJVagQMcY3Fs0z1z7rxhIzXccl7DHOCzQ_fyIM/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9jZG4t/aWNvbnMtcG5nLmZs/YXRpY29uLmNvbS8x/MjgvNDYxLzQ2MTgy/My5wbmc"
             alt="User"
-            style={{ maxWidth: '100%', height: 'auto' }}
+            style={{ maxWidth: '100%', height: '150' }}
           />
         </Space>
       </Col>
@@ -181,60 +193,62 @@ export default function Contents () {
           <Card className="left-card" title={<Link to="/experience">Experiences</Link>} bordered={false}>
     {/* Content for Experiences */}
     <Row gutter={[16, 16]}>
-        <Col xs={24} sm={12} md={8}>
-            <Space direction="vertical">
-                <Typography.Link id="title1">Big Time Studios</Typography.Link>
-                <Typography.Text>Business Development</Typography.Text>
-            </Space>
-        </Col>
-        <Col xs={24} sm={12} md={8}>
-            <Space direction="vertical">
-                <Typography.Link id="title1">Studious</Typography.Link>
-                <Typography.Text>	Director of Marketing </Typography.Text>
-            </Space>
-        </Col>
-        <Col xs={24} sm={12} md={8}>
-            <Space direction="vertical">
-                <Typography.Link id="title1">Resell Calendar</Typography.Link>
-                <Typography.Text>Managing Partner</Typography.Text>
-            </Space>
-        </Col>
-        <Col xs={24} sm={12} md={8}>
-            <Space direction="vertical">
-                <Typography.Link id="title1">Nirvan’s Brickseek</Typography.Link>
-                <Typography.Text>Founder</Typography.Text>
-            </Space>
-        </Col>
-        <Col xs={24} sm={12} md={8}>
-            <Space direction="vertical">
-                <Typography.Link id="title1">Tavern</Typography.Link>
-                <Typography.Text>Founder</Typography.Text>
-            </Space>
-        </Col>
-        <Col xs={24} sm={12} md={8}>
-            <Space direction="vertical">
-                <Typography.Link id="title1">Librehacks</Typography.Link>
-                <Typography.Text>Board Member </Typography.Text>
-            </Space>
-        </Col>
+      <Col xs={12} sm={12} md={8}>
+        <Space direction="vertical">
+          <Typography.Link id="title1">Big Time Studios</Typography.Link>
+          <Typography.Text>Business Development</Typography.Text>
+        </Space>
+      </Col>
+      <Col xs={12} sm={12} md={8}>
+        <Space direction="vertical">
+          <Typography.Link id="title1">Studious</Typography.Link>
+          <Typography.Text>Director of Marketing</Typography.Text>
+        </Space>
+      </Col>
+      <Col xs={12} sm={12} md={8}>
+        <Space direction="vertical">
+          <Typography.Link id="title1">Resell Calendar</Typography.Link>
+          <Typography.Text>Managing Partner</Typography.Text>
+        </Space>
+      </Col>
+      <Col xs={12} sm={12} md={8}>
+        <Space direction="vertical">
+          <Typography.Link id="title1">Nirvan’s Brickseek</Typography.Link>
+          <Typography.Text>Founder</Typography.Text>
+        </Space>
+      </Col>
+      <Col xs={12} sm={12} md={8}>
+        <Space direction="vertical">
+          <Typography.Link id="title1">Tavern</Typography.Link>
+          <Typography.Text>Founder</Typography.Text>
+        </Space>
+      </Col>
+      <Col xs={12} sm={12} md={8}>
+        <Space direction="vertical">
+          <Typography.Link id="title1">Librehacks</Typography.Link>
+          <Typography.Text>Board Member</Typography.Text>
+        </Space>
+      </Col>
     </Row>
 </Card>
+
+
           </Col>
           <Col span={24}>
           <Card className="left-card" title={<Link to="/Blog1">Blog</Link>} bordered={false}>
-    {/* Content for Blog */}
-    <Row gutter={[16, 16]}>
-  {blogData.slice(0, 6).map((item, index) => (
-    <Col xs={24} sm={12} md={8} key={index}>
-      <Space direction="vertical">
-        <Typography.Link id={`title${index}`} style={{ fontWeight: 'bold' }}>{item.title}</Typography.Link>
-        <Typography.Text>{item.description}</Typography.Text>
-      </Space>
-    </Col>
-  ))}
-</Row>
-
-</Card>
+      <Row gutter={[16, 16]}>
+        {blogData.slice(0, 6).map((item, index) => (
+          <Col xs={12} sm={12} md={8} key={index}>
+            <Space direction="vertical">
+              <Typography.Link id={`title${index}`} style={{ fontWeight: 'bold' }}>
+                {item.title}
+              </Typography.Link>
+              <Typography.Text>{item.description}</Typography.Text>
+            </Space>
+          </Col>
+        ))}
+      </Row>
+    </Card>
           </Col>
         </Row>
       </Col>
@@ -263,11 +277,18 @@ export default function Contents () {
     {/* Content for News and Notable */}
     <Row gutter={[16, 16]}>
         <Col xs={24} md={24}>
-            <Space direction="vertical">
-             
-                <Typography.Link>https://linkedin.com/nirvanp</Typography.Link>
-                <Typography.Text>908-858-0369</Typography.Text>
-                <Typography.Text>nirvan.panjwani@gmail.com</Typography.Text>
+        <Space direction="vertical">
+              <Typography.Link>
+                <a href="https://www.linkedin.com/in/nirvanp/">
+                  <LinkedinOutlined /> LinkedIn Profile
+                </a>
+              </Typography.Link>
+              <Typography.Text>
+                <PhoneOutlined /> 908-858-0369
+              </Typography.Text>
+              <Typography.Text>
+                <MailOutlined /> nirvan.panjwani@gmail.com
+              </Typography.Text>
             </Space>
         </Col>
         {/* You can add more items like the one above if needed */}
