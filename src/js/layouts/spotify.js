@@ -1,7 +1,7 @@
 import { Card, Col, Image, Layout, Row, Space, Typography,  } from "antd";
 import { LinkedinOutlined, PhoneOutlined, MailOutlined } from '@ant-design/icons';
 
-
+import { Helmet } from 'react-helmet';
 import React from "react";
 import { RightCircleOutlined } from '@ant-design/icons';
 import { Link } from "react-router-dom";
@@ -9,7 +9,16 @@ import blogData from './Blog'; // Import the data from Blog.js
 
 
 
-
+function MyComponent() {
+  return (
+    <>
+      <Helmet>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Helmet>
+      {/* Rest of the component */}
+    </>
+  );
+}
 const handleClick = () => {
     window.location.href = 'https://book.vimcal.com/p/nirvan/30min';
 
