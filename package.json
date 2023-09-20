@@ -23,7 +23,8 @@
     "react-spotify-web-playback": "^0.14.0",
     "spotifyCurrentlyPlaying.js": "^0.3.2",
     "styled-components": "^6.0.8",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "youtube-search-api": "^1.2.1"
   },
   "devDependencies": {
     "concurrently": "^7.6.0",
