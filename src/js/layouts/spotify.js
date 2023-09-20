@@ -1,14 +1,14 @@
 import { Card, Col, Image, Layout, Row, Space, Typography,  } from "antd";
 import { LinkedinOutlined, PhoneOutlined, MailOutlined } from '@ant-design/icons';
 
-
+import LastFmWidget from '../../components/LastFmWidget'; // Adjust the relative path as needed
 import { Helmet } from 'react-helmet';
 import React from "react";
 import { RightCircleOutlined } from '@ant-design/icons';
 import { Link } from "react-router-dom";
 import blogData from './Blog'; // Import the data from Blog.js
 
-import LastFmWidget from '../../components/LastFmWidget';
+
 const Spotify = () => {
   return (
     <div>
@@ -166,18 +166,11 @@ export default function Contents () {
 
     </Col>
     <Col xs={24} sm={8}>
-      <Card bordered={false} id="my-card" style={{ height: '140px', paddingTop: 0, paddingBottom: 20 }}>
-        <Space direction="vertical" style={{ marginTop: '1px' }}>
-          <iframe
-            style={{ borderRadius: '2px', width: '100%', height: '80px' }}
-            src="https://open.spotify.com/embed/playlist/4OSK7cznywwn9v4B4chxth?utm_source=generator&controls=1"
-            frameBorder="0"
-            allowFullScreen=""
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy"
-          ></iframe>
-        </Space>
-      </Card>
+    <Card bordered={false} id="my-card" style={{ height: '140px', padding: '10px', display: 'flex', alignItems: 'center', boxShadow: '0 2px 6px rgba(0, 0, 0, 0.1)', borderRadius: '5px' }}>
+  <LastFmWidget apiKey="d0e46e1f2cbcde13e369288d104cf0b7" userName="nirvanp" />
+</Card>
+
+
     </Col>
     <Col xs={24} sm={8}>
     <Card bordered={false} id="my-card" className={isMobile ? 'mobile-card' : ''}>
