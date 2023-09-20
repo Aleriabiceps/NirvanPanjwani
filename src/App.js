@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import LastFmWidget from '../../components/LastFmWidget';  // New Import
+import LastFmWidget from '../../components/LastFmWidget';
 
 import "../assets/css/main/main.css"
 
