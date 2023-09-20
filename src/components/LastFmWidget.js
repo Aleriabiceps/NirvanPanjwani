@@ -19,16 +19,15 @@ const LastFmWidget = ({ apiKey, userName }) => {
 
   return (
     <div style={{ 
-     
-      padding: '20px', 
+    
       maxWidth: '800px', 
      
  
       boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)', // Added a subtle shadow
     }}>
       <h2 style={{ 
-        fontSize: '18px', // Increased font size for the heading
-        marginBottom: '15px', // Added spacing below the heading
+        fontSize: '22px', // Increased font size for the heading
+        marginBottom: '2px', // Added spacing below the heading
         color: 'yellow', // Changed text color
       }}>Now Playing</h2>
       {latestTrack ? (
