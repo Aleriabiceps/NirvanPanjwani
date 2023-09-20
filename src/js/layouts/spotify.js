@@ -1,11 +1,24 @@
 import { Card, Col, Image, Layout, Row, Space, Typography,  } from "antd";
 import { LinkedinOutlined, PhoneOutlined, MailOutlined } from '@ant-design/icons';
 
+
 import { Helmet } from 'react-helmet';
 import React from "react";
 import { RightCircleOutlined } from '@ant-design/icons';
 import { Link } from "react-router-dom";
 import blogData from './Blog'; // Import the data from Blog.js
+
+import LastFmWidget from '../../components/LastFmWidget';
+const Spotify = () => {
+  return (
+    <div>
+      {/* ...other components and HTML */}
+      <LastFmWidget apiKey="d0e46e1f2cbcde13e369288d104cf0b7" userName="nirvanp" />
+      {/* ...other components and HTML */}
+    </div>
+  );
+};
+
 
 
 
@@ -17,6 +30,17 @@ function MyComponent() {
       </Helmet>
       {/* Rest of the component */}
     </>
+  );
+}
+function App() {
+  const apiKey = "d0e46e1f2cbcde13e369288d104cf0b7";
+  const userName = "nirvanp";
+  
+  return (
+    <div className="App">
+      <h1>Last.fm Recent Tracks</h1>
+      <LastFmWidget userName={userName} apiKey={apiKey} />
+    </div>
   );
 }
 const handleClick = () => {

@@ -8,19 +8,34 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "antd": "^5.8.3",
+    "axios": "^1.5.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "framer-motion": "^10.16.4",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
+    "react-query": "^3.39.3",
     "react-router-dom": "^6.15.0",
     "react-scripts": "5.0.1",
-    "styled-components": "^6.0.7",
+    "react-spotify-web-playback": "^0.14.0",
+    "spotifyCurrentlyPlaying.js": "^0.3.2",
+    "styled-components": "^6.0.8",
     "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "node-fetch": "^3.3.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "dev": "concurrently \"netlify dev\" \"npm run start\"",
+    "netlifyDev": "netlify dev"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +54,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
