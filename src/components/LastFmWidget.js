@@ -18,20 +18,39 @@ const LastFmWidget = ({ apiKey, userName }) => {
   }, [apiKey, userName]);
 
   return (
-    <div style={{ border: '1px solid #ccc', padding: '20px', maxWidth: '300px', borderRadius: '5px' }}>
-      <h2>Now Playing</h2>
+    <div style={{ 
+     
+      padding: '20px', 
+      maxWidth: '800px', 
+     
+ 
+      boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)', // Added a subtle shadow
+    }}>
+      <h2 style={{ 
+        fontSize: '18px', // Increased font size for the heading
+        marginBottom: '15px', // Added spacing below the heading
+        color: 'yellow', // Changed text color
+      }}>Now Playing</h2>
       {latestTrack ? (
         <div style={{ display: 'flex', alignItems: 'center' }}>
-          <img style={{ width: '60px', height: '60px', objectFit: 'cover', marginRight: '10px' }} src={latestTrack.image[2]['#text']} alt="Album cover" />
-          <div style={{ flexGrow: 1 }}>
-            <div><strong>Title:</strong> {latestTrack.name}</div>
-            <div><strong>Artist:</strong> {latestTrack.artist['#text']}</div>
-          </div>
+          <img style={{ 
+            width: '100px', 
+            height: '60px', 
+            objectFit: 'cover', 
+            marginRight: '10px', 
+            borderRadius: '5px', // Rounded corners for the image
+          }} src={latestTrack.image[2]['#text']} alt="Album cover" />
+        <div style={{ flexGrow: 1 }}>
+  <div><strong style={{ color: 'red' }}>Title:</strong> <span style={{ color: 'white' }}>{latestTrack.name}</span></div>
+  <div><strong style={{ color: 'red' }}>Artist:</strong> <span style={{ color: 'white' }}>{latestTrack.artist['#text']}</span></div>
+</div>
+
         </div>
       ) : (
         <p>Loading...</p>
       )}
     </div>
+    
   );
 };
 
