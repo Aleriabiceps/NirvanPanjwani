@@ -37,17 +37,19 @@ const LastFmWidget = ({ apiKey, userName }) => {
     }}>
       <h2 style={{ 
         fontSize: '22px', 
-        marginBottom: '2px', 
+        marginBottom: '10px', 
         color: 'yellow',
       }}>Now Playing</h2>
       {latestTrack ? (
         <div style={{ display: 'flex', alignItems: 'center' }}>
           <img style={{ 
-            width: '100px', 
-            height: '60px', 
-            objectFit: 'cover', 
-            marginRight: '10px', 
-            borderRadius: '5px',
+  width: '100px', 
+  height: '60px', 
+  objectFit: 'cover', 
+  marginRight: '10px', 
+  borderRadius: '5px',
+  fontWeight: 'bolder', /* Changed font-weight to be camelCase */
+  fontSize: '50px' /* Changed font-size to be camelCase */
           }} src={latestTrack.image[2]['#text']} alt="Album cover" />
           <button onClick={handlePlayClick} style={{ background: 'none', border: 'none', cursor: 'pointer' }}>
             <PlayCircleOutlined style={{ fontSize: '24px', color: 'yellow' }} />

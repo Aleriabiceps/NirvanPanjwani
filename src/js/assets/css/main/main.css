@@ -59,11 +59,12 @@
   border-radius: 0px;
   border-bottom: 0px;
   background-color: #0f3797;
-  color: #fff !important;
+  color: yellow; /* Changed text color to yellow */
   min-height: 40px;
   font-size: 25px;
   padding-left: 10px;
 }
+
 .left-card .ant-card-body {
   padding: 15px 50px 15px;
   background-color: lightyellow;

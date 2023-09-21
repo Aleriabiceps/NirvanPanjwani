@@ -17,7 +17,7 @@ const CustomCard = styled(Card)`
   width: 80%;
   max-width: 800px;
   margin-bottom: 400px;
-  border-color: black;
+
   
 `;
 
