@@ -54,7 +54,7 @@ const handleInstagramClick = () => {
 };
 
 export default function Contents () {
-    const isMobile = window.innerWidth <= 480; // Define the breakpoint for mobile
+    const isMobile = window.matchMedia <= 480; // Define the breakpoint for mobile
  
     if (isMobile) {
       return null; // Return null to hide the header on mobile
@@ -93,11 +93,7 @@ export default function Contents () {
       margin: 0 10px;
     }
 
-    @media (max-width: 768px) {
-      .logo,
-      .social-links {
-        display: none;
-      }
+  
     }
   `}</style>
 </Layout.Header>
