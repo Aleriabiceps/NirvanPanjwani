@@ -17,6 +17,8 @@ const CustomCard = styled(Card)`
   width: 80%;
   max-width: 800px;
   margin-bottom: 400px;
+  border-color: black;
+  
 `;
 
 const CustomTitle = styled(Typography.Title)`
@@ -29,7 +31,7 @@ const CustomTitle = styled(Typography.Title)`
 const BlogList = styled(List)`
   padding-left: 0;
 `;
-
+<div className={window.innerWidth <= 768 ? "BlogPostContainer BlogPostContainer--mobile-fullscreen" : "BlogPostContainer"}></div>
 const BlogPost = () => (
   <BlogPostContainer>
     <CustomCard>

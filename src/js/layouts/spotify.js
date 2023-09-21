@@ -1,6 +1,6 @@
-import { Card, Col, Image, Layout, Row, Space, Typography,  } from "antd";
+import { Card, Col, Image, Layout, Row, Space, Typography, List, Avatar, Button, Tooltip,  } from "antd";
 import { LinkedinOutlined, PhoneOutlined, MailOutlined } from '@ant-design/icons';
-
+import { useState, useEffect } from 'react';
 import LastFmWidget from '../../components/LastFmWidget'; // Adjust the relative path as needed
 import { Helmet } from 'react-helmet';
 import React from "react";
@@ -8,7 +8,7 @@ import { RightCircleOutlined } from '@ant-design/icons';
 import { Link } from "react-router-dom";
 import blogData from './Blog'; // Import the data from Blog.js
 
-
+import { NavLink } from 'react-router-dom';
 const Spotify = () => {
   return (
     <div>
@@ -65,7 +65,7 @@ export default function Contents () {
   src="https://gcdnb.pbrd.co/images/LnqxLZERJBjE.png?o=1"
   width={500}
   className="logo"
-  style={{ float: "left", marginRight: "20px", marginTop:"30px" }} // Use float and marginRight
+  style={{ float: "left", marginRight: "20px", marginTop:"70px", marginBottom:"60px" }} // Use float and marginRight
 />
   <div className="social-links">
     <a href="https://www.instagram.com/nirvan/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>
@@ -112,7 +112,12 @@ export default function Contents () {
     </div>
   </Col>
 </Row>
-            
+<div className="mobile-button-container">
+  <Button href="https://book.vimcal.com/p/nirvan/30min" className="mobile-button" type="primary">Book Me</Button>
+  <Button href="instagram.com/scene" className="mobile-button" type="primary">Photography</Button>
+</div>
+
+
 <Row gutter={12}>
     <Col xs={24} sm={24} md={12} lg={8}>
     <Card bordered={false} id="my-card" className={isMobile ? 'mobile-card' : ''}>
@@ -121,21 +126,30 @@ export default function Contents () {
     style={{ borderRadius: '1px' }} 
     justify={isMobile ? 'center' : 'start'}
   >
-    <Col 
+    <Col className="mobile-hidden"
       xs={24} sm={24} md={12} lg={8} 
       style={{ display: isMobile ? 'flex' : 'block', justifyContent: 'center' }}
     >
       <Space align={isMobile ? 'center' : 'start'} style={{ textAlign: isMobile ? 'center' : 'left' }}>
-      <img
-  className={isMobile ? 'mobile-image' : 'web-image'}  // Change class based on isMobile
+      <img 
+  style={{ 
+    width: isMobile ? '200px' : '80px', 
+    height: '86px',
+    marginLeft: isMobile ? '201px' : '0'
+  }}
   src="https://imgs.search.brave.com/TEX0ewvC9Lw69pioiebxjSnxPDOoPDgQMvHDEChSGQU/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4t/aWNvbnMtcG5nLmZs/YXRpY29uLmNvbS8x/MjgvODU4Ny84NTg3/MTcxLnBuZw"
   alt="User"
 />
 
+
+
+
+
+
       </Space>
     </Col>
     {!isMobile && (
-      <Col xs={24} sm={24} md={12} lg={16}>
+    <Col xs={0} sm={24} md={12} lg={16}>
         <Space direction="vertical">
           <Typography.Text id="text1" style={{ fontSize: 25 }}>
             Book Me
@@ -162,7 +176,7 @@ export default function Contents () {
 
     </Col>
     <Col xs={24} sm={8}>
-    <Card bordered={false} id="my-card" style={{ height: '140px', padding: '10px', display: 'flex', alignItems: 'center', boxShadow: '0 2px 6px rgba(0, 0, 0, 0.1)', borderRadius: '5px' }}>
+    <Card bordered={false} id="my-card" style={{ height: '140px', padding: '10px', display: 'flex', alignItems: 'center', boxShadow: '0 2px 6px rgba(0, 0, 0, 0.1)' }}>
   <LastFmWidget apiKey="d0e46e1f2cbcde13e369288d104cf0b7" userName="nirvanp" />
 </Card>
 
@@ -181,7 +195,7 @@ export default function Contents () {
         </Space>
       </Col>
       {!isMobile && (
-        <Col xs={24} sm={24} md={12} lg={16}>
+       <Col xs={0} sm={24} md={12} lg={16}>
           <Space direction="vertical">
             <Typography.Text id="text1" style={{ fontSize: 25 }}>
               Photography
@@ -322,7 +336,7 @@ export default function Contents () {
     </Row>
 
         </Layout.Content>
-        <Layout.Footer></Layout.Footer>
+       
 
     </Layout>
 }
