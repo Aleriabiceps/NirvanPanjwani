@@ -107,7 +107,7 @@ export default function Contents () {
         <strong>Welcome, Guest</strong> 
       </div>
       <div>
-        <strong>Drop a visor note</strong> <RightCircleOutlined />
+        <strong>Drop a vistor note</strong> <RightCircleOutlined />
       </div>
     </div>
   </Col>
@@ -158,7 +158,7 @@ export default function Contents () {
             My time is worthless.
             <span
               style={{
-                fontSize: '24px',
+                fontSize: '29px',
                 color: 'yellow',
                 marginLeft: '10px',
                 cursor: 'pointer',
@@ -190,7 +190,7 @@ export default function Contents () {
           <img
             src="https://imgs.search.brave.com/7z2hpTJVagQMcY3Fs0z1z7rxhIzXccl7DHOCzQ_fyIM/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9jZG4t/aWNvbnMtcG5nLmZs/YXRpY29uLmNvbS8x/MjgvNDYxLzQ2MTgy/My5wbmc"
             alt="User"
-            style={{ maxWidth: '100%', height: '150' }}
+            style={{ maxWidth: '100%', height: '160' }}
           />
         </Space>
       </Col>
@@ -204,7 +204,7 @@ export default function Contents () {
               New Hobby{' '}
               <span
                 style={{
-                  fontSize: '24px',
+                  fontSize: '29px',
                   color: 'yellow',
                   marginLeft: '10px',
                   cursor: 'pointer',
@@ -226,7 +226,7 @@ export default function Contents () {
       <Col xs={24} sm={16}>
         <Row gutter={12}>
           <Col span={24}>
-          <Card className="left-card" title={<Link to="/experience">Experiences</Link>} bordered={false}>
+          <Card className="left-card" title={<Link to="/experience" style={{ color: 'yellow' }}>Experiences</Link>} bordered={false}>
     {/* Content for Experiences */}
     <Row gutter={[16, 16]}>
       <Col xs={12} sm={12} md={8}>
@@ -271,7 +271,7 @@ export default function Contents () {
 
           </Col>
           <Col span={24}>
-          <Card className="left-card" title={<Link to="/Blog1">Blog</Link>} bordered={false}>
+          <Card className="left-card" title={<Link to="/Blog1" style={{ color: 'yellow' }}>Blog</Link>} bordered={false}>
       <Row gutter={[16, 16]}>
         {blogData.slice(0, 6).map((item, index) => (
           <Col xs={12} sm={12} md={8} key={index}>
