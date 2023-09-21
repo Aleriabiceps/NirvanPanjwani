@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 export default function App() {
-  const isMobile = window.innerWidth <= 768; // Define the breakpoint for mobile
+  const isMobile = window.matchMedia <= 768; // Define the breakpoint for mobile
  
   if (isMobile) {
     return null; // Return null to hide the header on mobile
@@ -13,7 +13,7 @@ export default function App() {
      
       <Layout.Content>
      
-      <Row style={{ marginTop: 15 }}>
+      <Row style={{ marginTop: 0 }}>
           {/* Left Part */}
        <Col xs={0} sm={0} md={8}>
             {/* Add your left part content here */}
