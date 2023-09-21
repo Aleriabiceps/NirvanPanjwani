@@ -284,9 +284,12 @@ export default function App() {
     <div className="table-cell table-header" style={{ display: "table-cell", padding: "1px", paddingLeft: "1px", border: "1px solid #000", fontWeight: "bold", width: "20%" }}>
       Link
     </div>
-    <div className="table-cell1" style={{ display: "table-cell", padding: "3px", paddingLeft: "1px", border: "1px solid #000", width: "30%" }}>
-      www.asdas
-    </div>
+    <div className="table-cell1" style={{ display: "table-cell", padding: "3px", paddingLeft: "1px", border: "1px solid #000", width: "30%" ,}}>
+  <a href="https://bigtime.gg" target="_blank" rel="noopener noreferrer">
+    Bigtime.gg
+  </a>
+</div>
+
   </div>
 </div>
 
@@ -403,7 +406,9 @@ Studious uses cognitive science and AI to make studying for standardized exams a
       Link
     </div>
     <div className="table-cell1" style={{ display: "table-cell", padding: "3px", paddingLeft: "1px", border: "1px solid #000", width: "30%" }}>
-      www.asdas
+    <a href="https://www.bestudious.io/" target="_blank" rel="noopener noreferrer">
+    Studios
+  </a>
     </div>
   </div>
 </div>
@@ -637,7 +642,9 @@ Nirvan’s Brickseek is a community for reselling limited items, coupons/deals, 
       Link
     </div>
     <div className="table-cell1" style={{ display: "table-cell", padding: "3px", paddingLeft: "1px", border: "1px solid #000", width: "30%" }}>
-      www.asdas
+    <a href="https://www.nirvanbrickseek.com/" target="_blank" rel="noopener noreferrer">
+    Nirvan's Brickseek
+  </a>
     </div>
   </div>
 </div>
@@ -754,7 +761,9 @@ Tavern revolutionizes the proxy purchasing experience by making it social and in
         Link
       </div>
       <div className="table-cell1" style={{ display: "table-cell", padding: "3px", paddingLeft: "1px", border: "1px solid #000", width: "30%" }}>
-        www.asdas
+      <a href="https://tavern.ai/" target="_blank" rel="noopener noreferrer">
+    Tavern
+  </a>
       </div>
     </div>
   </div>
@@ -873,7 +882,9 @@ A certified 501(c)(3) non-profit with the goal of encouraging stem education in 
         Link
       </div>
       <div className="table-cell1" style={{ display: "table-cell", padding: "3px", paddingLeft: "1px", border: "1px solid #000", width: "30%" }}>
-        www.asdas
+      <a href="https://librehacks.com/" target="_blank" rel="noopener noreferrer">
+    Librehacks
+  </a>
       </div>
     </div>
   </div>

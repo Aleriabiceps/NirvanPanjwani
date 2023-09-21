@@ -238,6 +238,7 @@
 .mobile-button-container {
   display: flex;
   justify-content: space-between;
+
 }
 
 @media (max-width: 768px) {
@@ -248,5 +249,24 @@
     border-color: black;
     background-color: #0f3797;
     margin-bottom: -2;
+    color: yellow;
+    font-weight: bolder;
   }
+}
+/* Mobile-specific CSS */
+@media only screen and (max-width: 768px) {
+  .BlogPostContainer--mobile-fullscreen {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+
+.kMCTxm {
+  margin: -51px;
 }
