@@ -1,5 +1,5 @@
 import { Card, Col, Image, Layout, Row, Space, Typography, List, Avatar, Button, Tooltip,  } from "antd";
-import { LinkedinOutlined, PhoneOutlined, MailOutlined } from '@ant-design/icons';
+import { LinkedinOutlined, InstagramOutlined, TwitterOutlined,  CustomerServiceOutlined, PhoneOutlined, MailOutlined } from '@ant-design/icons';
 import { useState, useEffect } from 'react';
 import LastFmWidget from '../../components/LastFmWidget'; // Adjust the relative path as needed
 import { Helmet } from 'react-helmet';
@@ -67,7 +67,7 @@ export default function Contents () {
   className="logo"
   style={{ float: "left", marginRight: "20px", marginTop:"70px", marginBottom:"60px" }} // Use float and marginRight
 />
-  <div className="social-links">
+  {/* <div className="social-links">
     <a href="https://www.instagram.com/nirvan/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>
       Instagram
     </a>
@@ -80,7 +80,7 @@ export default function Contents () {
     <a href="https://open.spotify.com/user/legon12345" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>
       Spotify
     </a>
-  </div>
+  </div> */}
 
   <style jsx>{`
     .social-links {
@@ -314,18 +314,30 @@ export default function Contents () {
     <Row gutter={[16, 16]}>
         <Col xs={24} md={24}>
         <Space direction="vertical">
-              <Typography.Link>
-                <a href="https://www.linkedin.com/in/nirvanp/">
-                  <LinkedinOutlined /> LinkedIn Profile
-                </a>
-              </Typography.Link>
-              <Typography.Text>
-                <PhoneOutlined /> 908-858-0369
-              </Typography.Text>
-              <Typography.Text>
-                <MailOutlined /> nirvan.panjwani@gmail.com
-              </Typography.Text>
-            </Space>
+  <Typography.Link>
+    <a href="https://www.linkedin.com/in/nirvanp/">
+      <LinkedinOutlined /> LinkedIn Profile
+    </a>
+  </Typography.Link>
+  <Typography.Link>
+    <a href="https://www.instagram.com/nirvan/">
+      <InstagramOutlined /> Instagram
+    </a>
+  </Typography.Link>
+  <Typography.Link>
+    <a href="https://twitter.com/nirvanpanj">
+      <TwitterOutlined /> Twitter
+    </a>
+  </Typography.Link>
+  
+  <Typography.Text>
+    <PhoneOutlined /> 908-858-0369
+  </Typography.Text>
+  <Typography.Text>
+    <MailOutlined /> nirvan.panjwani@gmail.com
+  </Typography.Text>
+</Space>
+
         </Col>
         {/* You can add more items like the one above if needed */}
     </Row>
