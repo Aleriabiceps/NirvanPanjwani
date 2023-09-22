@@ -2,6 +2,7 @@ import { Card, Row, Col, Typography, Space, List, Avatar, Button, Tooltip, Layou
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
+
 export default function App() {
   const isMobile = window.matchMedia <= 768; // Define the breakpoint for mobile
  
@@ -30,16 +31,17 @@ export default function App() {
     
   }}
 >
-  <img
-    src="https://21044391.fs1.hubspotusercontent-na1.net/hubfs/21044391/New_site/Big%20Time%20Logo.svg" // Replace with the path to your image
-    alt="Your Logo"
-    style={{
-      maxWidth: "100%", // Make sure the image scales within the container
-      maxHeight: "100%", // Prevent the image from overflowing the container
-      width: "auto", // Maintain the aspect ratio
-      height: "auto", // Maintain the aspect ratio
-    }}
-  />
+<img
+  src="https://imgs.search.brave.com/2aJlc8ptsq8EYDI1BIh8fPNhSXCEVHasVC3x31fKBjs/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9taXJv/Lm1lZGl1bS5jb20v/djIvMSpyTTZ4SlJi/UkFMdW5qVjAtYnI5/dnBRLmpwZWc" // Use forward slashes
+  style={{
+    maxWidth: "100%",
+    maxHeight: "100%",
+    width: "auto",
+    height: "auto",
+  }}
+/>
+
+
 </div>
 <div
   style={{
@@ -54,7 +56,7 @@ export default function App() {
   }}
 >
   <img
-    src="https://images.squarespace-cdn.com/content/v1/63da6efe2fdb0e6e5759772a/317df4f6-7fed-42fa-b243-abe7e1e32350/studious-logo.png?format=1500w" // Replace with the path to your image
+    src="https://scontent.fcgy1-1.fna.fbcdn.net/v/t39.30808-6/307021441_1487839098387462_1627351182448092755_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=a2f6c7&_nc_ohc=ek_9jrU9IxYAX8OftPk&_nc_ht=scontent.fcgy1-1.fna&oh=00_AfCOgD5C8rrIgLFKPP70Wzq1HuJ1ZYu2eVQcOyzs70pZFg&oe=6512E3C2" // Replace with the path to your image
     alt="Your Logo"
     style={{
       maxWidth: "100%", // Make sure the image scales within the container
@@ -100,7 +102,7 @@ export default function App() {
   }}
 >
   <img
-    src="https://www.nirvanbrickseek.com/assets/fce655b223c27be8.png" // Replace with the path to your image
+    src="https://pbs.twimg.com/profile_images/1255912235911843841/OJrkQQd7_400x400.jpg" // Replace with the path to your image
     alt="Your Logo"
     style={{
       maxWidth: "100%", // Make sure the image scales within the container
@@ -123,7 +125,7 @@ export default function App() {
   }}
 >
   <img
-    src="https://tavern.ai/img/tavern_logo_transparent.svg" // Replace with the path to your image
+    src="https://pbs.twimg.com/profile_images/1357071276070875138/Or0Fq1tZ_400x400.jpg" // Replace with the path to your image
     alt="Your Logo"
     style={{
       maxWidth: "100%", // Make sure the image scales within the container
@@ -146,7 +148,7 @@ export default function App() {
   }}
 >
   <img
-    src="https://librehacks.com/wp-content/uploads/2020/03/cropped-librehack_logo_transparent-1.png" // Replace with the path to your image
+    src="https://i.ibb.co/wKwzxyf/photo-2023-09-23-01-17-26.jpg" // Replace with the path to your image
     alt="Your Logo"
     style={{
       maxWidth: "100%", // Make sure the image scales within the container
@@ -193,7 +195,7 @@ export default function App() {
                   >
                     <span style={{ marginLeft: '2px' }}>1 - |</span>
                     <a
-                      href="#"
+                      href="https://bigtime.gg"
                       style={{
                         marginLeft: '10px',
                         textDecoration: 'underline',
@@ -326,7 +328,7 @@ export default function App() {
                   >
                     <span style={{ marginLeft: '2px' }}>2 - |</span>
                     <a
-                      href="#"
+                      href="https://www.bestudious.io/"
                       style={{
                         marginLeft: '10px',
                         textDecoration: 'underline',
@@ -446,7 +448,7 @@ Studious uses cognitive science and AI to make studying for standardized exams a
                   >
                     <span style={{ marginLeft: '2px' }}>3 - |</span>
                     <a
-                      href="#"
+                      href="resellcalendar.com"
                       style={{
                         marginLeft: '10px',
                         textDecoration: 'underline',
@@ -525,7 +527,9 @@ Resell Calendar is the #1 news source for resellers. Discover goods, keep on top
       Link
     </div>
     <div className="table-cell1" style={{ display: "table-cell", padding: "3px", paddingLeft: "1px", border: "1px solid #000", width: "30%" }}>
-      www.asdas
+    <a href="resellcalendar.com" target="_blank" rel="noopener noreferrer">
+   Resell Calendar
+  </a>
     </div>
   </div>
 </div>
@@ -563,7 +567,7 @@ Resell Calendar is the #1 news source for resellers. Discover goods, keep on top
                   >
                     <span style={{ marginLeft: '2px' }}>4 - |</span>
                     <a
-                      href="#"
+                      href="https://www.nirvanbrickseek.com/"
                       style={{
                         marginLeft: '10px',
                         textDecoration: 'underline',
@@ -682,7 +686,7 @@ Nirvan’s Brickseek is a community for reselling limited items, coupons/deals, 
                   >
                     <span style={{ marginLeft: '2px' }}>5 - |</span>
                     <a
-                      href="#"
+                      href="https://tavern.ai/"
                       style={{
                         marginLeft: '10px',
                         textDecoration: 'underline',
