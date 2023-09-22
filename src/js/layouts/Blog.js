@@ -4,34 +4,34 @@ import React from 'react';
 
 const blogData = [
   {
-    title: 'Big Time Studios',
-    description: 'Amazing Game Studio',
-    externalUrl: 'https://coincu.com/74508-interview-big-time/'
+    title: 'Guide to LinkedIn',
+    description: 'A High Schoolers Guide',
+    externalUrl: 'https://nirvanpanjwani.wixsite.com/mysite-2/post/a-high-schooler-s-guide-to-linkedin-cold-dms'
   },
   {
-    title: 'Facebook',
-    description: 'Facebook Meta',
-    externalUrl: 'https://www.facebook.com/'
+    title: 'My First Start-Up',
+    description: 'Lessons From My First Start-Up',
+    externalUrl: 'https://nirvanpanjwani.wixsite.com/mysite-2/post/lessons-from-my-first-start-up'
   },
   {
-    title: 'Apartment theraphy',
+    title: 'Bitcoin Or Bust',
     description: 'Sample only',
-    externalUrl: 'https://www.apartmenttherapy.com/'
+    externalUrl: 'https://nirvanpanjwani.wixsite.com/mysite-2/post/bitcoin-or-bust'
   },
   {
-    title: 'Say yes',
-    description: 'BEST BAGUETTE SANDWICH',
-    externalUrl: 'https://sayyes.com/'
+    title: 'The Future Of NFTs',
+    description: 'The new blockchain-based tech',
+    externalUrl: 'https://nirvanpanjwani.wixsite.com/mysite-2/post/the-future-of-nfts'
   },
   {
-    title: 'Bright/Bazaar',
-    description: 'Maintenance Hacks',
-    externalUrl: 'https://www.brightbazaarblog.com/'
+    title: 'Getting out of a Funk',
+    description: 'stress is what fuels me',
+    externalUrl: 'https://nirvanpanjwani.wixsite.com/mysite-2/post/getting-out-of-a-funk'
   },
   {
-    title: 'Cup of Joy',
-    description: 'Back-To-School Vibes',
-    externalUrl: 'https://cupofjo.com/'
+    title: 'Boost Your Brand',
+    description: 'Using Twitter to Boost Your Brand',
+    externalUrl: 'https://nirvanpanjwani.wixsite.com/mysite-2/post/using-twitter-to-boost-your-brand'
   },
 
 ];

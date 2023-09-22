@@ -158,7 +158,7 @@ export default function Contents () {
             My time is worthless.
             <span
               style={{
-                fontSize: '29px',
+                fontSize: '18px',
                 color: 'yellow',
                 marginLeft: '10px',
                 cursor: 'pointer',
@@ -190,7 +190,7 @@ export default function Contents () {
           <img
             src="https://imgs.search.brave.com/7z2hpTJVagQMcY3Fs0z1z7rxhIzXccl7DHOCzQ_fyIM/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9jZG4t/aWNvbnMtcG5nLmZs/YXRpY29uLmNvbS8x/MjgvNDYxLzQ2MTgy/My5wbmc"
             alt="User"
-            style={{ maxWidth: '100%', height: '160' }}
+            style={{ maxWidth: '103%', height: '165' }}
           />
         </Space>
       </Col>
@@ -204,7 +204,7 @@ export default function Contents () {
               New Hobby{' '}
               <span
                 style={{
-                  fontSize: '29px',
+                  fontSize: '19px',
                   color: 'yellow',
                   marginLeft: '10px',
                   cursor: 'pointer',
@@ -310,7 +310,7 @@ export default function Contents () {
           </Col>
           <Col span={24}>
           <Card className="right-card" title="Contact Me" bordered={false}>
-    {/* Content for News and Notable */}
+ 
     <Row gutter={[16, 16]}>
         <Col xs={24} md={24}>
         <Space direction="vertical">
@@ -339,7 +339,7 @@ export default function Contents () {
 </Space>
 
         </Col>
-        {/* You can add more items like the one above if needed */}
+      
     </Row>
 </Card>
           </Col>
