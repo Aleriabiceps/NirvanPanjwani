@@ -158,7 +158,7 @@ export default function Contents () {
             My time is worthless.
             <span
               style={{
-                fontSize: '18px',
+                fontSize: '19px',
                 color: 'yellow',
                 marginLeft: '10px',
                 cursor: 'pointer',
