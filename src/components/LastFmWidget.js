@@ -47,7 +47,7 @@ const LastFmWidget = ({ apiKey, userName }) => {
   height: '60px', 
   objectFit: 'cover', 
   marginRight: '10px', 
-  borderRadius: '5px',
+
   fontWeight: 'bolder', /* Changed font-weight to be camelCase */
   fontSize: '50px' /* Changed font-size to be camelCase */
           }} src={latestTrack.image[2]['#text']} alt="Album cover" />
