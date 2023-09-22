@@ -79,8 +79,8 @@ export default function App() {
   }}
 >
   <img
-    src="https://resellcalendar.com/wp-content/themes/rc/assets/media/logo_light.svg" // Replace with the path to your image
-    alt="Your Logo"
+    src="https://gcdnb.pbrd.co/images/3N570dc4K1UA.jpg?o=1" // Replace with the path to your image
+   
     style={{
       maxWidth: "100%", // Make sure the image scales within the container
       maxHeight: "100%", // Prevent the image from overflowing the container
