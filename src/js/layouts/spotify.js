@@ -8,6 +8,7 @@ import { RightCircleOutlined } from '@ant-design/icons';
 import { Link } from "react-router-dom";
 import blogData from './Blog'; // Import the data from Blog.js
 
+
 import { NavLink } from 'react-router-dom';
 const Spotify = () => {
   return (
@@ -267,24 +268,29 @@ export default function Contents () {
       </Col>
     </Row>
 </Card>
+<Card className="left-card" title={<Link to="/Blog1" style={{ color: 'yellow' }}>Blog</Link>} bordered={false}>
+  <Row gutter={[16, 16]}>
+    {blogData.slice(0, 6).map((item, index) => (
+      <Col xs={12} sm={12} md={8} key={index}>
+        <Space direction="vertical">
+          <Typography.Link id={`title${index}`} style={{ fontWeight: 'bold', cursor: 'pointer' }} onClick={() => window.open(item.externalUrl, '_blank')}>
+            {item.title}
+          </Typography.Link>
+          <Typography.Text>{item.description}</Typography.Text>
+        </Space>
+      </Col>
+    ))}
+  </Row>
+</Card>
+<Card className="left-card" title={<Link to="/experience" style={{ color: 'yellow' }}>Music</Link>} bordered={false}>
+    {/* Content for Experiences */}
+   =
+</Card>
 
 
           </Col>
           <Col span={24}>
-          <Card className="left-card" title={<Link to="/Blog1" style={{ color: 'yellow' }}>Blog</Link>} bordered={false}>
-      <Row gutter={[16, 16]}>
-        {blogData.slice(0, 6).map((item, index) => (
-          <Col xs={12} sm={12} md={8} key={index}>
-            <Space direction="vertical">
-              <Typography.Link id={`title${index}`} style={{ fontWeight: 'bold' }}>
-                {item.title}
-              </Typography.Link>
-              <Typography.Text>{item.description}</Typography.Text>
-            </Space>
-          </Col>
-        ))}
-      </Row>
-    </Card>
+       
           </Col>
         </Row>
       </Col>
