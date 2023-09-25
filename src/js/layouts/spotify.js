@@ -107,7 +107,7 @@ export default function Contents () {
         <strong>Welcome, Guest</strong> 
       </div>
       <div>
-        <strong>Drop a vistor note</strong> <RightCircleOutlined />
+        <strong>Drop a visitor note</strong> <RightCircleOutlined />
       </div>
     </div>
   </Col>
