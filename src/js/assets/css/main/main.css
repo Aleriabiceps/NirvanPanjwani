@@ -63,6 +63,7 @@
   min-height: 40px;
   font-size: 25px;
   padding-left: 10px;
+  text-decoration: underline;
 }
 
 .left-card .ant-card-body {
