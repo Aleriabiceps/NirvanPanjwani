@@ -31,7 +31,7 @@ const Latestrack = ({ apiKey, userName }) => {
       <ul style={{ paddingLeft: '20px', margin: '0' }}>
         {topAlbums.map((album, index) => (
           <li key={index} style={{ marginBottom: '2px' }}>
-            <span style={{ fontWeight: '600', fontFamily: 'Arial, sans-serif' }}>{album.name}</span>
+            <span style={{ fontWeight: '200', fontFamily: 'Arial, sans-serif' }}>{album.name}</span>
           </li>
         ))}
       </ul>
@@ -42,7 +42,7 @@ const Latestrack = ({ apiKey, userName }) => {
       <ul style={{ paddingLeft: '20px', margin: '0' }}>
         {topTracks.map((track, index) => (
           <li key={index} style={{ marginBottom: '2px' }}>
-            <span style={{ fontWeight: '600', fontFamily: 'Arial, sans-serif' }}>{track.name}</span>
+            <span style={{ fontWeight: '200', fontFamily: 'Arial, sans-serif' }}>{track.name}</span>
           </li>
         ))}
       </ul>
@@ -53,7 +53,7 @@ const Latestrack = ({ apiKey, userName }) => {
       <ul style={{ paddingLeft: '20px', margin: '0' }}>
         {topArtists.map((artist, index) => (
           <li key={index} style={{ marginBottom: '2px' }}>
-            <span style={{ fontWeight: '600', fontFamily: 'Arial, sans-serif' }}>{artist.name}</span>
+            <span style={{ fontWeight: '200', fontFamily: 'Arial, sans-serif' }}>{artist.name}</span>
           </li>
         ))}
       </ul>

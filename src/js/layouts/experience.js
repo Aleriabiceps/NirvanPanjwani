@@ -805,7 +805,7 @@ Tavern revolutionizes the proxy purchasing experience by making it social and in
                   >
                     <span style={{ marginLeft: '2px' }}>6 - |</span>
                     <a
-                      href="#"
+                      href="https://librehacks.com/"
                       style={{
                         marginLeft: '10px',
                         textDecoration: 'underline',

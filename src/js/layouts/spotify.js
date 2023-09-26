@@ -234,43 +234,59 @@ export default function Contents () {
           <Card className="left-card" title={<Link to="/experience" style={{ color: 'yellow' }}>Experiences</Link>} bordered={false}>
     {/* Content for Experiences */}
     <Row gutter={[16, 16]}>
-      <Col xs={12} sm={12} md={8}>
-        <Space direction="vertical">
-          <Typography.Link id="title1">Big Time Studios</Typography.Link>
-          <Typography.Text>Business Development</Typography.Text>
-        </Space>
-      </Col>
-      <Col xs={12} sm={12} md={8}>
-        <Space direction="vertical">
-          <Typography.Link id="title1">Studious</Typography.Link>
-          <Typography.Text>Director of Marketing</Typography.Text>
-        </Space>
-      </Col>
-      <Col xs={12} sm={12} md={8}>
-        <Space direction="vertical">
-          <Typography.Link id="title1">Resell Calendar</Typography.Link>
-          <Typography.Text>Managing Partner</Typography.Text>
-        </Space>
-      </Col>
-      <Col xs={12} sm={12} md={8}>
-        <Space direction="vertical">
-          <Typography.Link id="title1">Nirvan’s Brickseek</Typography.Link>
-          <Typography.Text>Founder</Typography.Text>
-        </Space>
-      </Col>
-      <Col xs={12} sm={12} md={8}>
-        <Space direction="vertical">
-          <Typography.Link id="title1">Tavern</Typography.Link>
-          <Typography.Text>Founder</Typography.Text>
-        </Space>
-      </Col>
-      <Col xs={12} sm={12} md={8}>
-        <Space direction="vertical">
-          <Typography.Link id="title1">Librehacks</Typography.Link>
-          <Typography.Text>Board Member</Typography.Text>
-        </Space>
-      </Col>
-    </Row>
+  <Col xs={12} sm={12} md={8}>
+    <Space direction="vertical">
+      <Typography.Link id="title1" href="https://bigtime.gg">
+        Big Time Studios
+      </Typography.Link>
+      <Typography.Text>Business Development</Typography.Text>
+    </Space>
+  </Col>
+  <Col xs={12} sm={12} md={8}>
+    <Space direction="vertical">
+      <Typography.Link id="title1" href="https://www.bestudious.io/">
+        Studious
+      </Typography.Link>
+      <Typography.Text>Director of Marketing</Typography.Text>
+    </Space>
+  </Col>
+  <Col xs={12} sm={12} md={8}>
+    <Space direction="vertical">
+      <Typography.Link id="title1" href="https://resellcalendar.com">
+        Resell Calendar
+      </Typography.Link>
+      <Typography.Text>Managing Partner</Typography.Text>
+    </Space>
+  </Col>
+  <Col xs={12} sm={12} md={8}>
+    <Space direction="vertical">
+      <Typography.Link
+        id="title1"
+        href="https://www.nirvanbrickseek.com"
+      >
+        Nirvan’s Brickseek
+      </Typography.Link>
+      <Typography.Text>Founder</Typography.Text>
+    </Space>
+  </Col>
+  <Col xs={12} sm={12} md={8}>
+    <Space direction="vertical">
+      <Typography.Link id="title1" href="https://tavern.ai/">
+        Tavern
+      </Typography.Link>
+      <Typography.Text>Founder</Typography.Text>
+    </Space>
+  </Col>
+  <Col xs={12} sm={12} md={8}>
+    <Space direction="vertical">
+      <Typography.Link id="title1" href="https://librehacks.com/">
+        Librehacks
+      </Typography.Link>
+      <Typography.Text>Board Member</Typography.Text>
+    </Space>
+  </Col>
+</Row>
+
 </Card>
 <Card className="left-card" title={<Link to="/Blog1" style={{ color: 'yellow' }}>Blog</Link>} bordered={false}>
   <Row gutter={[16, 16]}>
