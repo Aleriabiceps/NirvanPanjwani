@@ -1,30 +1,68 @@
 import React, { useEffect, useState } from 'react';
-import { Card } from 'antd';
-import { Link } from 'react-router-dom';
+import { PlayCircleOutlined, CustomerServiceOutlined, ContainerOutlined } from '@ant-design/icons';
 
-const LastFmWidget = ({ apiKey, userName }) => {
-  const [latestTrack, setLatestTrack] = useState(null);
-  const [topAlbums, setTopAlbums] = useState(null);
-  const [topTracks, setTopTracks] = useState(null);
-  const [topArtists, setTopArtists] = useState(null);
-  const [topTags, setTopTags] = useState(null);
+const Latestrack = ({ apiKey, userName }) => {
+  const [topAlbums, setTopAlbums] = useState([]);
+  const [topTracks, setTopTracks] = useState([]);
+  const [topArtists, setTopArtists] = useState([]);
 
   useEffect(() => {
-    // ... (Your existing fetchData code and other logic)
+    const fetchData = async (method, setStateFunc) => {
+      try {
+        const response = await fetch(`https://ws.audioscrobbler.com/2.0/?method=${method}&user=${userName}&api_key=${apiKey}&format=json&limit=3`);
+        const data = await response.json();
+        setStateFunc(data.topalbums?.album || data.toptracks?.track || data.topartists?.artist || []);
+      } catch (error) {
+        console.error(`Error fetching ${method}:`, error);
+      }
+    };
+
+    fetchData('user.gettopalbums', setTopAlbums);
+    fetchData('user.gettoptracks', setTopTracks);
+    fetchData('user.gettopartists', setTopArtists);
+
   }, [apiKey, userName]);
 
   return (
-    <Card className="left-card" title={<Link to="/experience" style={{ color: 'yellow' }}>Music</Link>} bordered={false}>
-      {/* Render top 1 of each category */}
-      <div>
-        {latestTrack && <div>Latest Track: {latestTrack.name}</div>}
-        {topAlbums && <div>Top Album: {topAlbums[0].name}</div>}
-        {topTracks && <div>Top Track: {topTracks[0].name}</div>}
-        {topArtists && <div>Top Artist: {topArtists[0].name}</div>}
-        {topTags && <div>Top Tag: {topTags[0].name}</div>}
-      </div>
-    </Card>
+    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '15px' }}>
+      
+    <div>
+      <h4><ContainerOutlined style={{ marginRight: '8px', color: '#3498db', marginBottom: '-30px' }} />Top Albums</h4>
+      <ul style={{ paddingLeft: '20px', margin: '0' }}>
+        {topAlbums.map((album, index) => (
+          <li key={index} style={{ marginBottom: '2px' }}>
+            <span style={{ fontWeight: '200', fontFamily: 'Arial, sans-serif' }}>{album.name}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  
+    <div>
+      <h4><PlayCircleOutlined style={{ marginRight: '8px', color: '#e74c3c' }} />Top Tracks</h4>
+      <ul style={{ paddingLeft: '20px', margin: '0' }}>
+        {topTracks.map((track, index) => (
+          <li key={index} style={{ marginBottom: '2px' }}>
+            <span style={{ fontWeight: '200', fontFamily: 'Arial, sans-serif' }}>{track.name}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  
+    <div>
+      <h4><CustomerServiceOutlined style={{ marginRight: '8px', color: '#2ecc71' }} />Top Artists</h4>
+      <ul style={{ paddingLeft: '20px', margin: '0' }}>
+        {topArtists.map((artist, index) => (
+          <li key={index} style={{ marginBottom: '2px' }}>
+            <span style={{ fontWeight: '200', fontFamily: 'Arial, sans-serif' }}>{artist.name}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  
+  </div>
+  
+  
   );
 };
 
-export default LastFmWidget;
+export default Latestrack;
