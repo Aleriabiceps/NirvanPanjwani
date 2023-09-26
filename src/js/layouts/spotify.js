@@ -7,6 +7,10 @@ import React from "react";
 import { RightCircleOutlined } from '@ant-design/icons';
 import { Link } from "react-router-dom";
 import blogData from './Blog'; // Import the data from Blog.js
+import Latestrack from '../../components/latestrack';
+
+
+
 
 
 import { NavLink } from 'react-router-dom';
@@ -283,8 +287,7 @@ export default function Contents () {
   </Row>
 </Card>
 <Card className="left-card" title={<Link to="/experience" style={{ color: 'yellow' }}>Music</Link>} bordered={false}>
-    {/* Content for Experiences */}
-   =
+<Latestrack apiKey="d0e46e1f2cbcde13e369288d104cf0b7" userName="nirvanp" />
 </Card>
 
 
