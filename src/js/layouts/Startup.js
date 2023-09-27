@@ -5,6 +5,13 @@ import { UserOutlined } from '@ant-design/icons';
 const { Title, Paragraph } = Typography;
 
 function Startup() {
+    const article = {
+        title: 'Lessons From My First Start-Up',
+        description: 'Lessons From My First Start-Up',
+        image: 'https://static.wixstatic.com/media/a05cab_47cbbaf40b084bf7b906cee7f7792799~mv2.jpeg/v1/fill/w_375,h_263,al_c,lg_1,q_80,enc_auto/a05cab_47cbbaf40b084bf7b906cee7f7792799~mv2.jpeg',
+        content: 'This past summer, during quarantine ... (rest of the content)',
+    };
+
     return (
         <div style={{ maxWidth: '800px', margin: '40px auto', padding: '20px', fontFamily: '"Arial", sans-serif' }}>
             

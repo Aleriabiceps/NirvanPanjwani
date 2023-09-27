@@ -1,6 +1,7 @@
 import React from 'react';
 import { Typography, Avatar, Divider, Button } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
+import { Link } from "react-router-dom";
 
 const { Title, Paragraph } = Typography;
 
