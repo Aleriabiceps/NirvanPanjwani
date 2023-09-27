@@ -21,7 +21,7 @@ const BlogPost = () => {
       title: 'A High Schooler Guide to LinkedIn Cold DMs',
       description: 'A High Schoolers Guide',
       image: `https://static.wixstatic.com/media/a05cab_3d5593a82fb74428973491e9fb8e5c06~mv2.png/v1/fill/w_740,h_182,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/a05cab_3d5593a82fb74428973491e9fb8e5c06~mv2.png`,
-      externalUrl: 'https://nirvanpanjwani.wixsite.com/mysite-2/post/a-high-schooler-s-guide-to-linkedin-cold-dms',
+      externalUrl: '/Linkedin',
       content: `👋 Hi David - I'm a junior in high school interested in brand strategy and marketing. I noticed your involvement with companies like Gemini and would love some insight into student involvement in the industry. 
 
 
@@ -41,7 +41,7 @@ const BlogPost = () => {
       title: 'Lessons From My First Start-Up',
       description: 'Lessons From My First Start-Up',
       image: `https://static.wixstatic.com/media/a05cab_47cbbaf40b084bf7b906cee7f7792799~mv2.jpeg/v1/fill/w_375,h_263,al_c,lg_1,q_80,enc_auto/a05cab_47cbbaf40b084bf7b906cee7f7792799~mv2.jpeg`,
-      externalUrl: 'https://nirvanpanjwani.wixsite.com/mysite-2/post/lessons-from-my-first-start-up',
+      externalUrl: '/startup',
       content:`This past summer, during quarantine I started my own membership-based community, https://nirvanbrickseek.com. I used a popular website from the lego collecting community, brickseek.com to track down discounts and deals and organize that info in short form consumable posts in a discord group. I started it in January, and by March we had 200 members. At this point, there was no charge to be in the group, however, I monetized the service by offering to post deals in similar groups for a fee. This funded the adventure, and soon I had around 3000 members in my own free group, along with around 25 employees consisting of developers, support team, and social media content curators. We had a suite of monitors for sites like slick deals and forums on Reddit that pinged as soon as deals with important keywords were posted. From here, I monetized once again and decided to offer a monthly subscription membership on a limited basis to those 3000 members to unlock more/better deals. The move was a success, however, personal issues came up and I decided to sell a portion of the brand. I am still an active partner, however, I don’t commit hours a day to the project. Here are some of the lessons I’ve learned: `,
       
     },
@@ -49,7 +49,7 @@ const BlogPost = () => {
       title: 'Bitcoin Or Bust', 
       description: 'Investment strategy',
       image: `https://static.wixstatic.com/media/a05cab_f9cb6143bb1a4766973c93b76a6ede6a~mv2.jpg/v1/fill/w_740,h_494,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/a05cab_f9cb6143bb1a4766973c93b76a6ede6a~mv2.jpg`,
-      externalUrl: 'https://nirvanpanjwani.wixsite.com/mysite-2/post/bitcoin-or-bust',
+      externalUrl: '/Bitcoin',
       content: `My investment strategy when it comes to Bitcoin is the opposite of logical — it's 100% emotionally based, a gut feeling. Bit
 
 
