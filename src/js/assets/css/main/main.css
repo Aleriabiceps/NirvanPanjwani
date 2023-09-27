@@ -281,3 +281,8 @@
   margin: -51px;
 }
 
+@media (max-width: 768px) {
+  .ReactModal__Content {
+      display: none !important;
+  }
+}
