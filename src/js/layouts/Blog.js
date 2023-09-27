@@ -33,6 +33,11 @@ const blogData = [
     description: 'Using Twitter to Boost Your Brand',
     externalUrl: 'https://nirvanpanjwani.wixsite.com/mysite-2/post/using-twitter-to-boost-your-brand'
   },
+  {
+    title: 'The To-Do List:',
+    description: 'A Procrastinator’s Saving Grace',
+    externalUrl: '/list'
+  },
 
 ];
 

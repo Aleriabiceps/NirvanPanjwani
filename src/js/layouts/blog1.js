@@ -59,7 +59,7 @@ const BlogPost = () => {
       title: 'The Future Of NFTs',
       description: 'The new blockchain-based tech',
       image: `https://static.wixstatic.com/media/a05cab_934b0133cdfb4d9395b002ef86074b41~mv2.jpg/v1/fill/w_740,h_336,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/a05cab_934b0133cdfb4d9395b002ef86074b41~mv2.jpg`,
-      externalUrl: 'https://nirvanpanjwani.wixsite.com/mysite-2/post/the-future-of-nfts',
+      externalUrl: 'NFT',
       content: `NFTs, the new blockchain-based tech hoping to revolutionize the way we consume and display art. With prominent backers like the NBA, and their NBA Topshot franchise, are NFTs destined for wide-scale adoption? 
 
 
@@ -69,9 +69,9 @@ const BlogPost = () => {
     },
     {
       title: 'Getting out of a Funk',
-      description: 'stress is what fuels me',
+      description: 'Stress is what fuels me',
       image: `https://static.wixstatic.com/media/a05cab_c6286361105b46e284fd8fbaa86ce2b8~mv2.jpg/v1/fill/w_740,h_530,al_c,lg_1,q_85,enc_auto/a05cab_c6286361105b46e284fd8fbaa86ce2b8~mv2.jpg`,
-      externalUrl: 'https://nirvanpanjwani.wixsite.com/mysite-2/post/getting-out-of-a-funk',
+      externalUrl: '/stress',
       content: `For me, stress is what fuels me. The constant sense of fire under me is what pushes me every morning to get out of bed and do something with my time. However, some mornings I just don't. I want to take that 1-hour long breakfast where I scroll endlessly on my phone for 40 minutes after my bowl of cereal and milk is over — and suddenly that leads to a full day, or sometimes multiple days of a funk. 
 
 
@@ -82,12 +82,20 @@ const BlogPost = () => {
     {
       title: 'Using Twitter to Boost Your Brand',
       description: 'Using Twitter to Boost Your Brand',
-      image: `https://static.wixstatic.com/media/a05cab_bd601b2a64324cbda01f666a73790bdc~mv2.png/v1/fill/w_740,h_383,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/a05cab_bd601b2a64324cbda01f666a73790bdc~mv2.png`,
-      externalUrl: 'https://nirvanpanjwani.wixsite.com/mysite-2/post/using-twitter-to-boost-your-brand',
+      image: `https://static.wixstatic.com/media/a05cab_182219ee91904d4f992fb4d86162752b~mv2.jpg/v1/fill/w_740,h_493,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/a05cab_182219ee91904d4f992fb4d86162752b~mv2.jpg`,
+      externalUrl: '/Boost',
       content: `Twitter is one of the best tools in a social media toolbox, due to its ability to let 280 character text bursts go viral within the hour. With an advertising audience of almost 300 million users, you’re bound to find a niche that your product fits in. 
+ However, there is a steep learning curve, so here are 3 important lessons I’ve absorbed so far. `
+    },
+    {
+      title: 'The To-Do List:',
+      description: 'A Procrastinator’s Saving Grace',
+      image: `https://static.wixstatic.com/media/a05cab_bd601b2a64324cbda01f666a73790bdc~mv2.png/v1/fill/w_740,h_383,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/a05cab_bd601b2a64324cbda01f666a73790bdc~mv2.png`,
+      externalUrl: '/list',
+      content: `I used to come home from school and jump straight into my bed. Sometimes to sleep, sometimes to endlessly scroll on my phone,
 
 
-      However, there is a steep learning curve, so here are 3 important lessons I’ve absorbed so far. `
+      or sometimes to finish entire seasons of shows in one sitting. I would always think to myself, “just 10 more minutes, I’ll start my work at 3:30”, and slowly it would become 4, then 4:30, and pretty soon my mom was calling me down for dinner. After dinner, I would make one last-ditch effort to avoid my homework and take a shower. At this point, it was 8:30, my homework was due in less than 12 hours, and I knew there was no avoiding it.  `
     }
   ];
 
