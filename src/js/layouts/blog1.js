@@ -212,12 +212,12 @@ const BlogPost = () => {
 };
 
 
-
+const [show, setShow] = useState(true); // or false, depending on your default value
 
   return (
-    <div style={Object.assign({}, blogContainerStyle, { display: 'none' } : {})}>
+    <div style={Object.assign({}, blogContainerStyle, show ? {} : { display: 'none' })}>
     <h1 style={blogTitleStyle}>Blog Posts</h1>
-    <ul style={Object.assign({}, blogListStyle,  {})}>
+    <ul style={blogListStyle}>
       {blogData.map((item) => (
         <li key={item.title}>
           <span
