@@ -215,7 +215,7 @@ const BlogPost = () => {
 
 
   return (
-    <div style={Object.assign({}, blogContainerStyle, window.innerWidth <= 768 ? { display: 'none' } : {})}>
+    <div style={Object.assign({}, blogContainerStyle, { display: 'none' } : {})}>
     <h1 style={blogTitleStyle}>Blog Posts</h1>
     <ul style={Object.assign({}, blogListStyle,  {})}>
       {blogData.map((item) => (
