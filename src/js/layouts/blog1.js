@@ -21,7 +21,7 @@ const BlogPost = () => {
       title: 'A High Schooler Guide to LinkedIn Cold DMs',
       description: 'A High Schoolers Guide',
       image: `https://static.wixstatic.com/media/a05cab_3d5593a82fb74428973491e9fb8e5c06~mv2.png/v1/fill/w_740,h_182,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/a05cab_3d5593a82fb74428973491e9fb8e5c06~mv2.png`,
-      externalUrl: 'https://nirvanpanjwani.wixsite.com/mysite-2/post/a-high-schooler-s-guide-to-linkedin-cold-dms',
+      externalUrl: '/Linkedin',
       content: `👋 Hi David - I'm a junior in high school interested in brand strategy and marketing. I noticed your involvement with companies like Gemini and would love some insight into student involvement in the industry. 
 
 
