@@ -4,6 +4,7 @@ import { UserOutlined } from '@ant-design/icons';
 
 const { Title, Paragraph } = Typography;
 
+
 function BlogPost2() {
     return (
         <div style={{ maxWidth: '800px', margin: '40px auto', padding: '20px', fontFamily: '"Arial", sans-serif' }}>
