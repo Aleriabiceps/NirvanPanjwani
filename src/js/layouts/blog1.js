@@ -18,7 +18,7 @@ const BlogPost = () => {
 
   const blogData = [
     {
-      title: 'Guide to LinkedIn',
+      title: 'A High Schooler Guide to LinkedIn Cold DMs',
       description: 'A High Schoolers Guide',
       image: `https://static.wixstatic.com/media/a05cab_3d5593a82fb74428973491e9fb8e5c06~mv2.png/v1/fill/w_740,h_182,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/a05cab_3d5593a82fb74428973491e9fb8e5c06~mv2.png`,
       externalUrl: 'https://nirvanpanjwani.wixsite.com/mysite-2/post/a-high-schooler-s-guide-to-linkedin-cold-dms',
@@ -38,7 +38,7 @@ const BlogPost = () => {
       Here are a few tips that helped me crack the code. `,
     },
     {
-      title: 'My First Start-Up',
+      title: 'Lessons From My First Start-Up',
       description: 'Lessons From My First Start-Up',
       image: `https://static.wixstatic.com/media/a05cab_47cbbaf40b084bf7b906cee7f7792799~mv2.jpeg/v1/fill/w_375,h_263,al_c,lg_1,q_80,enc_auto/a05cab_47cbbaf40b084bf7b906cee7f7792799~mv2.jpeg`,
       externalUrl: 'https://nirvanpanjwani.wixsite.com/mysite-2/post/lessons-from-my-first-start-up',
@@ -80,7 +80,7 @@ const BlogPost = () => {
       Now I’m not saying that you should never take an extra-long breakfast, or never sleep in a bit, rather cautioning that a lot of the times this can lead to more time wasted than you  intended. Here are 3 things that personally helped me:`
     },
     {
-      title: 'Boost Your Brand',
+      title: 'Using Twitter to Boost Your Brand',
       description: 'Using Twitter to Boost Your Brand',
       image: `https://static.wixstatic.com/media/a05cab_bd601b2a64324cbda01f666a73790bdc~mv2.png/v1/fill/w_740,h_383,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/a05cab_bd601b2a64324cbda01f666a73790bdc~mv2.png`,
       externalUrl: 'https://nirvanpanjwani.wixsite.com/mysite-2/post/using-twitter-to-boost-your-brand',
@@ -128,6 +128,7 @@ const BlogPost = () => {
     cursor: 'pointer',
     textDecoration: 'underline',
     color: 'blue',
+
   };
 
   const blogNavigationStyle = {
@@ -192,7 +193,7 @@ const BlogPost = () => {
   const navigationStyle = {
     // ...styles specific to the <nav> element
     display: 'flex',
-    justifyContent: 'space-between', // example to space out the links
+    // example to space out the links
   };
   const navigationContainerStyle = {
     // ...your container styles here
@@ -288,7 +289,7 @@ const BlogPost = () => {
         Read More
       </a>
       <Button 
-        style={{...modalCloseBtnStyle, marginLeft: '20px'}}
+        style={{...modalCloseBtnStyle, marginLeft: '10px'}}
         onClick={closeModal}
         onMouseOver={(e) => e.target.style.backgroundColor = modalCloseBtnHoverStyle.backgroundColor}
         onMouseOut={(e) => e.target.style.backgroundColor = modalCloseBtnStyle.backgroundColor}
