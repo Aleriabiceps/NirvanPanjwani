@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Modal from 'react-modal';
 
+import { Modal, Row, Col, Button } from 'antd';
 
 
 
@@ -189,26 +189,34 @@ const BlogPost = () => {
       boxShadow: '0px 0px 15px 0px #000000'
     }
   };
-  const mobileBlogContainerStyle = {
-    width: '100%',
-    padding: '10px',
+  const navigationStyle = {
+    // ...styles specific to the <nav> element
+    display: 'flex',
+    justifyContent: 'space-between', // example to space out the links
+  };
+  const navigationContainerStyle = {
+    // ...your container styles here
   };
   
-  const mobileBlogListStyle = {
-    padding: '0',
-  };
-  
-  const mobileBlogNavLinkStyle = {
-    display: 'block',
-    margin: '10px 0',
-  };
-  
-  
+  const linkStyle = {
+    textDecoration: 'none',          // No underline for the link
+    color: '#333',                  // Text color (dark gray)
+    backgroundColor: '#f2f2f2',     // Light gray background color
+    padding: '8px 16px',            // Padding around the text
+    borderRadius: '4px',            // Slight rounded corners for the button
+    display: 'inline-block',        // Allows for padding and maintains inline behavior
+    border: '1px solid #ccc',       // Gray border
+    transition: 'background-color 0.2s',  // Smoothens the hover effect transition
+    cursor: 'pointer'               // Hand cursor when hovering over the link
+};
+
+
+
 
   return (
     <div style={Object.assign({}, blogContainerStyle, window.innerWidth <= 768 ? { display: 'none' } : {})}>
     <h1 style={blogTitleStyle}>Blog Posts</h1>
-    <ul style={Object.assign({}, blogListStyle, window.innerWidth <= 768 ? mobileBlogListStyle : {})}>
+    <ul style={Object.assign({}, blogListStyle,  {})}>
       {blogData.map((item) => (
         <li key={item.title}>
           <span
@@ -221,29 +229,57 @@ const BlogPost = () => {
       ))}
     </ul>
   
-    <div style={blogNavigationStyle}>
-      <Link to="/" style={Object.assign({}, blogNavLinkStyle, window.innerWidth <= 768 ? mobileBlogNavLinkStyle : {})}>Home</Link>
-      <Link to="/experience" style={Object.assign({}, blogNavLinkStyle, window.innerWidth <= 768 ? mobileBlogNavLinkStyle : {})}>Experience</Link>
-    </div>
+    <div style={navigationContainerStyle}>
+    <nav style={navigationStyle}>
+      <Link to="/" style={linkStyle}>Home</Link>
+      <Link to="/experience" style={linkStyle}>Experience</Link>
+    </nav>
+  </div>
+
   
     <Modal
-      isOpen={!!selectedBlog}
-      onRequestClose={closeModal}
-      style={customStyles}
-      ariaHideApp={false}
-    >
-      {selectedBlog?.image && (
-        <div style={{...modalImageContainerStyle, backgroundImage: `url(${selectedBlog.image})`}} />
-      )}
+    visible={!!selectedBlog}
+    onCancel={closeModal}
+    footer={null}
+    style={{ ...customStyles, top: '10px' }} // Here we set the top position to 10px
+    wrapClassName="custom-modal-class"
+    closable={false}
+ >
+
+  <Row gutter={16}>
+    {/* Image row */}
+    {selectedBlog?.image && (
+      <Col xs={24} className="mobile-hidden">
+        <div 
+          style={{
+            ...modalImageContainerStyle, 
+            backgroundImage: `url(${selectedBlog.image})`,
+            height: '200px', // Limit the image height
+            backgroundSize: 'cover' // Cover the div area with the image
+          }} 
+        />
+      </Col>
+    )}
+
+    {/* Title */}
+    <Col xs={24} style={{ marginTop: '10px' }}> 
       <h2 style={modalTitleStyle}>
         {selectedBlog?.title}
       </h2>
+    </Col>
+
+    {/* Description and Content */}
+    <Col xs={24} style={{ marginBottom: '10px' }}> 
       <p style={modalDescriptionStyle}>
         {selectedBlog?.description}
       </p>
       <p style={modalContentContentStyle}>
         {selectedBlog?.content}
       </p>
+    </Col>
+
+    {/* Link and Button */}
+    <Col xs={24} style={{ display: 'flex', justifyContent: 'space-between' }}>
       <a style={blogLinkStyle} 
          href={selectedBlog?.externalUrl}
          target="_blank"
@@ -251,15 +287,19 @@ const BlogPost = () => {
       >
         Read More
       </a>
-      <button 
+      <Button 
         style={{...modalCloseBtnStyle, marginLeft: '20px'}}
         onClick={closeModal}
         onMouseOver={(e) => e.target.style.backgroundColor = modalCloseBtnHoverStyle.backgroundColor}
         onMouseOut={(e) => e.target.style.backgroundColor = modalCloseBtnStyle.backgroundColor}
       >
         Close
-      </button>
-    </Modal>
+      </Button>
+    </Col>
+  </Row>
+</Modal>
+
+
   </div>
   
 

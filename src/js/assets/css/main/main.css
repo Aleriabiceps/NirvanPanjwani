@@ -281,8 +281,18 @@
   margin: -51px;
 }
 
-@media (max-width: 768px) {
-  .ReactModal__Content {
-      display: none !important;
+.custom-modal-class .ant-modal {
+  width: 50% !important; /* Overriding Ant Design's styles */
+  top: 100%;
+}
+
+
+@media screen and (max-width: 768px) {
+  .custom-modal-class .ant-modal {
+      width: 100% !important;
+      height: 100vh !important;
+      top: 0;
+      padding: 0;
+      margin-bottom: 20px;
   }
 }
