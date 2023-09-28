@@ -16,27 +16,32 @@ const isColorDark = (color) => {
 };
 
 const Board = () => {
-    const [item, setItem] = useState("");
+    const [message, setMessage] = useState("");
+    const [author, setAuthor] = useState("");
     const [items, setItems] = useState(JSON.parse(localStorage.getItem("items")) || []);
+    const [backgroundColor] = useState(
+        `linear-gradient(45deg, ${randomColor()}, ${randomColor()})`
+    );
 
     useEffect(() => {
         localStorage.setItem("items", JSON.stringify(items));
     }, [items]);
 
     const newitem = () => {
-        if (item.trim() !== "") {
+        if (message.trim() !== "" && author.trim() !== "") {
             const newItemObj = {
                 id: uuidv4(),
-                item: item,
+                message: message,
+                author: author,
                 color: randomColor({ luminosity: "light" }),
                 defaultPos: { x: 100, y: 0 },
             };
 
             setItems((prevItems) => [...prevItems, newItemObj]);
-            setItem("");
+            setMessage("");
+            setAuthor("");
         } else {
-            alert("Enter an item");
-            setItem("");
+            alert("Enter both a message and an author");
         }
     };
 
@@ -48,98 +53,102 @@ const Board = () => {
 
     const deleteNote = (id) => {
         const password = prompt("Enter the admin password to delete this note:");
-        if (password === "YouDoNote!") {
+        if (password === "NirvanDelete123!!") {
             setItems(prevItems => prevItems.filter(itemObj => itemObj.id !== id));
         } else {
             alert("Incorrect password. You are not authorized to delete.");
         }
     };
+
     const keyPress = (event) => {
         var code = event.keyCode || event.which;
         if (code === 13) {
             newitem();
         }
     };
+
     return (
-        <div style={{ 
-            background: `linear-gradient(45deg, ${randomColor()}, ${randomColor()})`, 
-            minHeight: '100vh', 
+        <div style={{
+            background: backgroundColor,
+            minHeight: '100vh',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
             padding: '20px'
         }}>
-           <Title
-        level={2}
-        style={{
-          color: 'white',
-          fontSize: '2.5rem',
-          marginBottom: 0,
-          textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
-        }}
-      >
-        Visitor's Board
-      </Title>
+            <Title
+                level={2}
+                style={{
+                    color: 'white',
+                    fontSize: '2.5rem',
+                    marginBottom: 0,
+                    textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+                }}
+            >
+                Visitor's Board
+            </Title>
             <Divider />
             <Space direction="vertical" size="middle">
-  <Input
-    value={item}
-    onChange={(e) => setItem(e.target.value)}
-    placeholder="Enter something..."
-    onKeyPress={(e) => keyPress(e)}
-    style={{ width: '100%', maxWidth: '300px' }}
-  />
-  <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-  <Link to="/"> {/* Link to the home page route */}
-      <Button type="primary">Home</Button> {/* Home button */}
-    </Link>
-    <Button type="primary" onClick={newitem}>ENTER</Button>
-   
-  </div>
-</Space>
-
-
+                <Input
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    placeholder="Enter your message..."
+                    style={{ width: '100%', maxWidth: '300px' }}
+                />
+                <Input
+                    value={author}
+                    onChange={(e) => setAuthor(e.target.value)}
+                    placeholder="Author"
+                    style={{ width: '100%', maxWidth: '300px' }}
+                />
+                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                    <Link to="/"> {/* Link to the home page route */}
+                        <Button type="primary">Home</Button> {/* Home button */}
+                    </Link>
+                    <Button type="primary" onClick={newitem}>ENTER</Button>
+                </div>
+            </Space>
             <Divider />
-
             {items.map((itemObj, index) => {
                 const textColor = isColorDark(itemObj.color) ? 'white' : 'black';
                 return (
                     <Draggable
-                    key={itemObj.id}
-                    defaultPosition={itemObj.defaultPos}
-                    onStop={(e, data) => updatePos(data, index)}
-                  >
-                    <Card
-                      size="small"
-                      style={{
-                        width: '100%',
-                        maxWidth: '250px',
-                        backgroundColor: itemObj.color,
-                        cursor: 'move',
-                        marginBottom: '15px',
-                        color: textColor,
-                        position: 'relative', // Establish a positioning context
-                      }}
+                        key={itemObj.id}
+                        defaultPosition={itemObj.defaultPos}
+                        onStop={(e, data) => updatePos(data, index)}
                     >
-                      <Space justify="space-between">
-                        <span>{itemObj.item}</span>
-                        <div
-                          style={{
-                            position: 'absolute',
-                            top: '5px',
-                            right: '5px',
-                          }}
+                        <Card
+                            size="small"
+                            style={{
+                                width: '100%',
+                                maxWidth: '250px',
+                                backgroundColor: itemObj.color,
+                                cursor: 'move',
+                                marginBottom: '15px',
+                                color: textColor,
+                                position: 'relative', // Establish a positioning context
+                            }}
                         >
-                          <Button type="text" onClick={() => deleteNote(itemObj.id)} danger>
-                            X
-                          </Button>
-                        </div>
-                      </Space>
-                    </Card>
-                  </Draggable>
-                  
-                  
+                            <Space justify="space-between">
+                                <div>
+                                    <div>{itemObj.message}</div>
+                                    <div style={{ fontWeight: 'bold' }}>Author: {itemObj.author}</div>
+                                </div>
+                                <div
+                                    style={{
+                                        position: 'absolute',
+                                        top: '5px',
+                                        right: '5px',
+                                    }}
+                                >
+                                    <Button type="text" onClick={() => deleteNote(itemObj.id)} danger>
+                                        X
+                                    </Button>
+                                </div>
+                            </Space>
+                        </Card>
+                    </Draggable>
                 );
             })}
         </div>
