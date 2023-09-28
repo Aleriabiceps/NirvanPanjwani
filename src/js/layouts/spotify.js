@@ -9,7 +9,8 @@ import { Link } from "react-router-dom";
 import blogData from './Blog'; // Import the data from Blog.js
 import Latestrack from '../../components/latestrack';
 import Board from '../../Board';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'font-awesome/css/font-awesome.min.css';
 
 
 
@@ -340,38 +341,40 @@ export default function Contents () {
           </Col>
           <Col span={24}>
           <Card className="right-card" title="Contact Me" bordered={false}>
- 
-    <Row gutter={[16, 16]}>
-        <Col xs={24} md={24}>
-        <Space direction="vertical">
-  <Typography.Link>
-    <a href="https://www.linkedin.com/in/nirvanp/">
-      <LinkedinOutlined /> LinkedIn Profile
-    </a>
-  </Typography.Link>
-  <Typography.Link>
-    <a href="https://www.instagram.com/nirvan/">
-      <InstagramOutlined /> Instagram
-    </a>
-  </Typography.Link>
-  <Typography.Link>
-    <a href="https://twitter.com/nirvanpanj">
-      <TwitterOutlined /> Twitter
-    </a>
-  </Typography.Link>
-  
-  <Typography.Text>
-    <PhoneOutlined /> 908-858-0369
-  </Typography.Text>
-  <Typography.Text>
-    <MailOutlined /> nirvan.panjwani@gmail.com
-  </Typography.Text>
-</Space>
-
-        </Col>
-      
-    </Row>
+  <Row gutter={[16, 16]}>
+    <Col xs={24} md={24}>
+      <Space direction="vertical">
+        <Typography.Link>
+          <a href="https://www.linkedin.com/in/nirvanp/">
+            <LinkedinOutlined /> LinkedIn Profile
+          </a>
+        </Typography.Link>
+        <Typography.Link>
+          <a href="https://www.instagram.com/nirvan/">
+            <InstagramOutlined /> Instagram
+          </a>
+        </Typography.Link>
+        <Typography.Link>
+          <a href="https://twitter.com/nirvanpanj">
+            <TwitterOutlined /> Twitter
+          </a>
+        </Typography.Link>
+        <Typography.Link>
+          <a href="https://open.spotify.com/user/legon12345">
+          <i className="fa fa-spotify" style={{ fontSize: '15px' }}></i> Spotify 
+          </a>
+        </Typography.Link>
+        <Typography.Text>
+          <PhoneOutlined /> 908-858-0369
+        </Typography.Text>
+        <Typography.Text>
+          <MailOutlined /> nirvan.panjwani@gmail.com
+        </Typography.Text>
+      </Space>
+    </Col>
+  </Row>
 </Card>
+
           </Col>
         </Row>
       </Col>

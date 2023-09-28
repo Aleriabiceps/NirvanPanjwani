@@ -65,7 +65,7 @@ const Board = () => {
 
     const deleteNote = (id) => {
         const password = prompt("Enter the admin password to delete this note:");
-        if (password === "YouDoNote!") {
+        if (password === "NirvanDelete123!!") {
             setItems(prevItems => prevItems.filter(itemObj => itemObj.id !== id));
         } else {
             alert("Incorrect password. You are not authorized to delete.");
