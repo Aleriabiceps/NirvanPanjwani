@@ -8,6 +8,8 @@ import { RightCircleOutlined } from '@ant-design/icons';
 import { Link } from "react-router-dom";
 import blogData from './Blog'; // Import the data from Blog.js
 import Latestrack from '../../components/latestrack';
+import Board from '../../Board';
+
 
 
 
@@ -111,9 +113,12 @@ export default function Contents () {
       <div>
         <strong>Welcome, Guest</strong> 
       </div>
-      <div>
+      <Link to="/board">
+    <div>
         <strong>Drop a visitor note</strong> <RightCircleOutlined />
-      </div>
+    </div>
+</Link>
+
     </div>
   </Col>
 </Row>
