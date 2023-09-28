@@ -19,13 +19,25 @@ const Board = () => {
     const [message, setMessage] = useState("");
     const [author, setAuthor] = useState("");
     const [items, setItems] = useState(JSON.parse(localStorage.getItem("items")) || []);
-    const [backgroundColor] = useState(
+    const [backgroundColor, setBackgroundColor] = useState(
         `linear-gradient(45deg, ${randomColor()}, ${randomColor()})`
     );
 
     useEffect(() => {
         localStorage.setItem("items", JSON.stringify(items));
     }, [items]);
+
+    useEffect(() => {
+        // Change the background color every 2 minutes (120,000 milliseconds)
+        const interval = setInterval(() => {
+            setBackgroundColor(
+                `linear-gradient(45deg, ${randomColor()}, ${randomColor()})`
+            );
+        }, 60000);
+
+        // Clear the interval when the component unmounts
+        return () => clearInterval(interval);
+    }, []);
 
     const newitem = () => {
         if (message.trim() !== "" && author.trim() !== "") {
@@ -53,7 +65,7 @@ const Board = () => {
 
     const deleteNote = (id) => {
         const password = prompt("Enter the admin password to delete this note:");
-        if (password === "NirvanDelete123!!") {
+        if (password === "YouDoNote!") {
             setItems(prevItems => prevItems.filter(itemObj => itemObj.id !== id));
         } else {
             alert("Incorrect password. You are not authorized to delete.");
@@ -67,42 +79,72 @@ const Board = () => {
         }
     };
 
+    // Define inline styles for mobile and desktop
+    const containerStyle = {
+        background: backgroundColor,
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '20px',
+    };
+
+    const titleStyle = {
+        color: 'white',
+        fontSize: '2.5rem',
+        marginBottom: 0,
+        textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+    };
+
+    const inputContainerStyle = {
+        width: '100%',
+        maxWidth: '300px',
+    };
+
+    const inputStyle = {
+        width: '100%',
+        maxWidth: '100%',
+    };
+
+    const buttonContainerStyle = {
+        display: 'flex',
+        justifyContent: 'space-between',
+    };
+
+    const noteCardStyle = {
+        width: '100%',
+        maxWidth: '250px',
+        marginBottom: '15px',
+        position: 'relative',
+    };
+
+    const deleteButtonStyle = {
+        position: 'absolute',
+        top: '5px',
+        right: '5px',
+    };
+
     return (
-        <div style={{
-            background: backgroundColor,
-            minHeight: '100vh',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            padding: '20px'
-        }}>
-            <Title
-                level={2}
-                style={{
-                    color: 'white',
-                    fontSize: '2.5rem',
-                    marginBottom: 0,
-                    textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
-                }}
-            >
+        <div style={containerStyle}>
+            <Title level={2} style={titleStyle}>
                 Visitor's Board
             </Title>
             <Divider />
-            <Space direction="vertical" size="middle">
+            <Space direction="vertical" size="middle" style={inputContainerStyle}>
                 <Input
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     placeholder="Enter your message..."
-                    style={{ width: '100%', maxWidth: '300px' }}
+                    style={inputStyle}
                 />
                 <Input
                     value={author}
                     onChange={(e) => setAuthor(e.target.value)}
                     placeholder="Author"
-                    style={{ width: '100%', maxWidth: '300px' }}
+                    style={inputStyle}
                 />
-                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <div style={buttonContainerStyle}>
                     <Link to="/"> {/* Link to the home page route */}
                         <Button type="primary">Home</Button> {/* Home button */}
                     </Link>
@@ -121,13 +163,9 @@ const Board = () => {
                         <Card
                             size="small"
                             style={{
-                                width: '100%',
-                                maxWidth: '250px',
+                                ...noteCardStyle,
                                 backgroundColor: itemObj.color,
-                                cursor: 'move',
-                                marginBottom: '15px',
                                 color: textColor,
-                                position: 'relative', // Establish a positioning context
                             }}
                         >
                             <Space justify="space-between">
@@ -135,13 +173,7 @@ const Board = () => {
                                     <div>{itemObj.message}</div>
                                     <div style={{ fontWeight: 'bold' }}>Author: {itemObj.author}</div>
                                 </div>
-                                <div
-                                    style={{
-                                        position: 'absolute',
-                                        top: '5px',
-                                        right: '5px',
-                                    }}
-                                >
+                                <div style={deleteButtonStyle}>
                                     <Button type="text" onClick={() => deleteNote(itemObj.id)} danger>
                                         X
                                     </Button>
