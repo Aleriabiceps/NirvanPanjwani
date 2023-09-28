@@ -6,7 +6,7 @@ const { Title, Paragraph } = Typography;
 
 function Bitcoin() {
     return (
-        <div style={{ maxWidth: '800px', margin: '40px auto', padding: '20px', fontFamily: '"Arial", sans-serif' }}>
+        <div style={{ maxWidth: '800px', margin: '40px auto', padding: '20px', fontFamily: '"Arial", sans-serif', backgroundColor: '#f9f9f9' }}>
             
             <div style={{ display: 'flex', alignItems: 'center', marginBottom: '30px' }}>
                 <Avatar size={64} icon={<UserOutlined />} src="URL_TO_YOUR_IMAGE_HERE" />
@@ -17,30 +17,38 @@ function Bitcoin() {
             </div>
             
             <Title>Bitcoin Or Bust</Title>
-            <Paragraph>
-                <span role="img" aria-label="wave">👋</span> My investment strategy when it comes to Bitcoin is the opposite of logical — it's 100% emotionally based, a gut feeling. Bitcoin’s (and other cryptocurrencies) main selling point is that they are decentralized so there isn’t a singular entity that props up its value or regulates it, compared to today’s currency. My issue with today’s currency and politics, in general, is that there is a lack of transparency. I don’t know where my tax money specifically goes, I don’t know if Jeffery Epstein actually killed himself or not, I don’t know if the media is lying. The only thing I know is never to trust a politician. 
-            </Paragraph>
-            <Paragraph>
-            Bitcoin doesnt solve those problems. However, bitcoin does represent a new age of open-sourced technologies that give power to the people. I know when each new bitcoin is minted, I can check when my friend pays his friend, I can see which companies are currently buying bitcoin. Imagine a future where dark money doesn’t exist, because every single cent is tracked. The future I want to live in is one where I can pay my taxes in a government-backed stable coin, and track where every single dollar goes. 
-            </Paragraph>
-            <Paragraph>
-            So far every point Ive made has been personal speculation, so lets take a second to examine the US dollar and silver. The price of silver in 1980 was around 20 dollars per troy ounce (https://sdbullion.com/silver-prices-1980), and the price in 2019 was also 20 dollars (https://sdbullion.com/silver-prices-2019). If these are said to be indicators of inflation, then in the last 40 years the dollar hasn’t lost its value at all. However, it has: 50 dollars in 1980 is now equivalent to around 160 dollars today. So how can it be that although the dollar lost around 3x of its value, silver prices didn’t change at all? 
-            <Paragraph>
-            Some say bitcoin has been and can be used for illegal activities (read: Silk Road, dark web, and other illicit activities where bitcoin has been the key to thousands of transactions). However, the US dollar has also been used to fund terrorism and drugs. One of the biggest drug busts in United States history was 1 billion dollars worth of cocaine seized on a boat owned by JPMorgan (https://www.forbes.com/sites/rachelsandler/2019/07/11/us-authorities-seize-20-tons-of-cocaine-from-ship-owned-by-jp-morgan/?sh=2d9784e72ea3). It’s also known that the government did turn a blind eye to certain activities during the war on drugs, which was funded by none other than the US government. (https://oig.justice.gov/sites/default/files/archive/special/9712/ch01p1.htm).
-            </Paragraph>
-            </Paragraph>
-             <Paragraph>
-             As well as this, institutions like Tesla, Goldman Sachs, Citigroup have all been dabbling in cryptocurrency, and are currently buying more bitcoin per month than what is being minted. These are institutions that won’t sell their entire holdings at the first signs of a dip and are in it for the long-term hold. They provide a level of support, ensuring that even if retail investors panic and flee, the chances that bitcoin will ever crash back to anywhere near 0 is low. 
-
-
-            </Paragraph>
-            <Paragraph>
-            This article isnt meant to be an attack on the US government — I appreciate the freedoms that we have (just the fact that I can write this article is proof of that), and the work they do for our economy and to keep us safe. However, I do believe that there is a growing amount of distrust between the government and the people. A non-government backed currency is a natural solution for people who don’t believe their money is safe in US dollars. 
-            </Paragraph>
-            <Divider />
-
-          
             
+            <Paragraph>
+                <span role="img" aria-label="wave">👋</span> My investment strategy when it comes to Bitcoin is the opposite of logical — it's 100% emotionally based, a gut feeling. Bitcoin’s main selling point is decentralization. This contrasts with today’s currency, which is often shrouded in opacity, making me skeptical about its true movements and intents.
+            </Paragraph>
+            
+            <Paragraph>
+                Bitcoin doesn't solve transparency problems in politics or media, but it does represent a new age of open-sourced technologies that empower individuals. Every transaction is recorded. A future where all funds are traceable is appealing to me. 
+            </Paragraph>
+            
+            <Paragraph>
+                Let's examine the dynamics of the US dollar and silver. While indicators like silver's price might suggest the dollar’s value has been steady, this is far from reality. Consider the contrast between silver prices in 1980 and 2019. Adjusted for inflation, 50 dollars in 1980 equates to roughly 160 dollars today, showcasing the dollar’s diminishing purchasing power over time.
+            </Paragraph>
+            
+            <Divider dashed />
+            
+            <Paragraph>
+                The criticisms of Bitcoin, especially its association with illegal transactions, are often mirrored by the US dollar. For instance, a significant cocaine seizure was linked to a boat owned by JPMorgan. The US government itself has faced allegations related to the war on drugs. 
+            </Paragraph>
+            
+            <Divider dashed />
+            
+            <Paragraph>
+                Moreover, institutions like Tesla and Goldman Sachs are increasingly involved in cryptocurrency. Their consistent bitcoin purchases provide a foundation of support for the cryptocurrency, buffering against potential market panics.
+            </Paragraph>
+            
+            <Divider dashed />
+            
+            <Paragraph>
+                This isn't a critique of the US government. I value the freedoms and security it provides. But the growing mistrust between the government and its people is undeniable. A decentralized currency like Bitcoin offers an alternative for those skeptical of traditional financial systems.
+            </Paragraph>
+            
+            <Divider />
 
         </div>
     );

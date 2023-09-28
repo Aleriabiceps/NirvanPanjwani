@@ -60,7 +60,7 @@ const BlogPost = () => {
       title: 'The Future Of NFTs',
       description: 'The new blockchain-based tech',
       image: `https://static.wixstatic.com/media/a05cab_934b0133cdfb4d9395b002ef86074b41~mv2.jpg/v1/fill/w_740,h_336,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/a05cab_934b0133cdfb4d9395b002ef86074b41~mv2.jpg`,
-      externalUrl: 'NFT',
+      externalUrl: '/NFT',
       content: `NFTs, the new blockchain-based tech hoping to revolutionize the way we consume and display art. With prominent backers like the NBA, and their NBA Topshot franchise, are NFTs destined for wide-scale adoption? 
 
 
