@@ -79,78 +79,50 @@ const Board = () => {
         }
     };
 
-    // Define inline styles for mobile and desktop
-    const containerStyle = {
-        background: backgroundColor,
-        minHeight: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: '20px',
-    };
-
-    const titleStyle = {
-        color: 'white',
-        fontSize: '2.5rem',
-        marginBottom: 0,
-        textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
-    };
-
-    const inputContainerStyle = {
-        width: '100%',
-        maxWidth: '300px',
-    };
-
-    const inputStyle = {
-        width: '100%',
-        maxWidth: '100%',
-    };
-
-    const buttonContainerStyle = {
-        display: 'flex',
-        justifyContent: 'space-between',
-    };
-
-    const noteCardStyle = {
-        width: '100%',
-        maxWidth: '250px',
-        marginBottom: '15px',
-        position: 'relative',
-    };
-
-    const deleteButtonStyle = {
-        position: 'absolute',
-        top: '5px',
-        right: '5px',
-    };
-
     return (
-        <div style={containerStyle}>
-            <Title level={2} style={titleStyle}>
+        <div style={{
+            background: backgroundColor,
+            minHeight: '100vh',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '20px'
+        }}>
+            <Title
+                level={2}
+                style={{
+                    color: 'white',
+                    fontSize: '2.5rem',
+                    marginBottom: 0,
+                    textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+                }}
+            >
                 Visitor's Board
             </Title>
             <Divider />
-            <Space direction="vertical" size="middle" style={inputContainerStyle}>
-                <Input
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    placeholder="Enter your message..."
-                    style={inputStyle}
-                />
-                <Input
-                    value={author}
-                    onChange={(e) => setAuthor(e.target.value)}
-                    placeholder="Author"
-                    style={inputStyle}
-                />
-                <div style={buttonContainerStyle}>
-                    <Link to="/"> {/* Link to the home page route */}
-                        <Button type="primary">Home</Button> {/* Home button */}
-                    </Link>
-                    <Button type="primary" onClick={newitem}>ENTER</Button>
-                </div>
-            </Space>
+            <Space direction="vertical" size="middle">
+  <Input
+    value={message}
+    onChange={(e) => setMessage(e.target.value)}
+    placeholder="Enter your message..."
+    style={{ width: '100%', maxWidth: '300px', border: 'none' }}
+  />
+  <Input
+    value={author}
+    onChange={(e) => setAuthor(e.target.value)}
+    placeholder="Author"
+    style={{ width: '100%', maxWidth: '300px', border: 'none' }}
+  />
+  <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+    <Link to="/"> {/* Link to the home page route */}
+      <Button type="primary">Home</Button> {/* Home button */}
+    </Link>
+    <Button type="primary" onClick={newitem}>ENTER</Button>
+  </div>
+</Space>
+
+
             <Divider />
             {items.map((itemObj, index) => {
                 const textColor = isColorDark(itemObj.color) ? 'white' : 'black';
@@ -163,9 +135,13 @@ const Board = () => {
                         <Card
                             size="small"
                             style={{
-                                ...noteCardStyle,
+                                width: '100%',
+                                maxWidth: '250px',
                                 backgroundColor: itemObj.color,
+                                cursor: 'move',
+                                marginBottom: '15px',
                                 color: textColor,
+                                position: 'relative', // Establish a positioning context
                             }}
                         >
                             <Space justify="space-between">
@@ -173,7 +149,13 @@ const Board = () => {
                                     <div>{itemObj.message}</div>
                                     <div style={{ fontWeight: 'bold' }}>Author: {itemObj.author}</div>
                                 </div>
-                                <div style={deleteButtonStyle}>
+                                <div
+                                    style={{
+                                        position: 'absolute',
+                                        top: '5px',
+                                        right: '5px',
+                                    }}
+                                >
                                     <Button type="text" onClick={() => deleteNote(itemObj.id)} danger>
                                         X
                                     </Button>

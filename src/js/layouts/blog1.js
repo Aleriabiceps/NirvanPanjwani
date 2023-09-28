@@ -297,13 +297,21 @@ const [show, setShow] = useState(true); // or false, depending on your default v
     Read More
   </Link>
   <Button 
-    style={{...modalCloseBtnStyle, marginLeft: '10px'}}
-    onClick={closeModal}
-    onMouseOver={(e) => e.target.style.backgroundColor = modalCloseBtnHoverStyle.backgroundColor}
-    onMouseOut={(e) => e.target.style.backgroundColor = modalCloseBtnStyle.backgroundColor}
-  >
-    Close
-  </Button>
+  style={{
+    ...modalCloseBtnStyle,
+    display: 'flex',
+    alignItems: 'center', // Vertical center alignment
+    marginLeft: '10px',
+
+    
+  }}
+  onClick={closeModal}
+  onMouseOver={(e) => e.target.style.backgroundColor = modalCloseBtnHoverStyle.backgroundColor}
+  onMouseOut={(e) => e.target.style.backgroundColor = modalCloseBtnStyle.backgroundColor}
+>
+  Close
+</Button>
+
 </Col>
   </Row>
 </Modal>
