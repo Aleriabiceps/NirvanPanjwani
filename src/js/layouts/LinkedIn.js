@@ -2,6 +2,8 @@ import React from 'react';
 import { Typography, Avatar, Divider, Button } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
 
+
+
 const { Title, Paragraph } = Typography;
 
 
@@ -91,7 +93,6 @@ The last tip I have is to scout the profile. If you’re trying to make a connec
 
             <Divider />
 
-           
         </div>
     );
 }
