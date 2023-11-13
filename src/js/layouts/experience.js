@@ -56,7 +56,7 @@ export default function App() {
   }}
 >
   <img
-    src="https://scontent.fcgy1-1.fna.fbcdn.net/v/t39.30808-6/307021441_1487839098387462_1627351182448092755_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=a2f6c7&_nc_ohc=ek_9jrU9IxYAX8OftPk&_nc_ht=scontent.fcgy1-1.fna&oh=00_AfCOgD5C8rrIgLFKPP70Wzq1HuJ1ZYu2eVQcOyzs70pZFg&oe=6512E3C2" // Replace with the path to your image
+    src="https://images.squarespace-cdn.com/content/v1/63da6efe2fdb0e6e5759772a/c244abc0-ffc4-4719-9306-c661d20a9f4e/studious-brain.png?format=750w" // Replace with the path to your image
     alt="Your Logo"
     style={{
       maxWidth: "100%", // Make sure the image scales within the container
@@ -378,7 +378,7 @@ Studious uses cognitive science and AI to make studying for standardized exams a
                     </Col>
                     <Col span={12}className="mobile-hidden">
                       <div className="card" style={{ display: "flex", justifyContent: "flex-end" }}>
-                      <div className="table-container" style={{ display: "table", borderCollapse: "collapse", position: "absolute", bottom: -80, left: 25, width: "100%", border: "1px solid #000", paddingRight: "20px", tableLayout: "fixed" }}>
+                      <div className="table-container" style={{ display: "table", borderCollapse: "collapse", position: "absolute", bottom: -90, left: 25, width: "100%", border: "1px solid #000", paddingRight: "20px", tableLayout: "fixed" }}>
   <div className="table-row" style={{ display: "table-row" }}>
     <div className="table-cell table-header" style={{ display: "table-cell", padding: "2px", paddingLeft: "1px", border: "1px solid #000", fontWeight: "bold", width: "20%" }}>
       Start
@@ -497,7 +497,7 @@ Resell Calendar is the #1 news source for resellers. Discover goods, keep on top
                     </Col>
                     <Col span={12}className="mobile-hidden">
                       <div className="card" style={{ display: "flex", justifyContent: "flex-end" }}>
-                      <div className="table-container" style={{ display: "table", borderCollapse: "collapse", position: "absolute", bottom: -46, left: 25, width: "100%", border: "1px solid #000", paddingRight: "20px", tableLayout: "fixed" }}>
+                      <div className="table-container" style={{ display: "table", borderCollapse: "collapse", position: "absolute", bottom: -90, left: 25, width: "100%", border: "1px solid #000", paddingRight: "20px", tableLayout: "fixed" }}>
   <div className="table-row" style={{ display: "table-row" }}>
     <div className="table-cell table-header" style={{ display: "table-cell", padding: "2px", paddingLeft: "1px", border: "1px solid #000", fontWeight: "bold", width: "20%" }}>
       Start
@@ -616,7 +616,7 @@ Nirvan’s Brickseek is a community for reselling limited items, coupons/deals, 
                     </Col>
                     <Col span={12}className="mobile-hidden">
                       <div className="card" style={{ display: "flex", justifyContent: "flex-end" }}>
-                      <div className="table-container" style={{ display: "table", borderCollapse: "collapse", position: "absolute", bottom: -63, left: 25, width: "100%", border: "1px solid #000", paddingRight: "20px", tableLayout: "fixed" }}>
+                      <div className="table-container" style={{ display: "table", borderCollapse: "collapse", position: "absolute", bottom: -90, left: 25, width: "100%", border: "1px solid #000", paddingRight: "20px", tableLayout: "fixed" }}>
   <div className="table-row" style={{ display: "table-row" }}>
     <div className="table-cell table-header" style={{ display: "table-cell", padding: "2px", paddingLeft: "1px", border: "1px solid #000", fontWeight: "bold", width: "20%" }}>
       Start
@@ -735,7 +735,7 @@ Tavern revolutionizes the proxy purchasing experience by making it social and in
                     </Col>
                     <Col span={12}className="mobile-hidden">
                     <div className="card" style={{ display: "flex", justifyContent: "flex-end" }}>
-  <div className="table-container" style={{ display: "table", borderCollapse: "collapse", position: "absolute", bottom: -80, left: 25, width: "100%", border: "1px solid #000", paddingRight: "20px", tableLayout: "fixed" }}>
+  <div className="table-container" style={{ display: "table", borderCollapse: "collapse", position: "absolute", bottom: -90, left: 25, width: "100%", border: "1px solid #000", paddingRight: "20px", tableLayout: "fixed" }}>
     <div className="table-row" style={{ display: "table-row" }}>
       <div className="table-cell table-header" style={{ display: "table-cell", padding: "2px", paddingLeft: "1px", border: "1px solid #000", fontWeight: "bold", width: "20%" }}>
         Start
@@ -856,7 +856,7 @@ A certified 501(c)(3) non-profit with the goal of encouraging stem education in 
                     </Col>
                     <Col span={12}className="mobile-hidden">
                     <div className="card" style={{ display: "flex", justifyContent: "flex-end" }}>
-  <div className="table-container" style={{ display: "table", borderCollapse: "collapse", position: "absolute", bottom: -80, left: 25, width: "100%", border: "1px solid #000", paddingRight: "20px", tableLayout: "fixed" }}>
+  <div className="table-container" style={{ display: "table", borderCollapse: "collapse", position: "absolute", bottom: -90, left: 25, width: "100%", border: "1px solid #000", paddingRight: "20px", tableLayout: "fixed" }}>
     <div className="table-row" style={{ display: "table-row" }}>
       <div className="table-cell table-header" style={{ display: "table-cell", padding: "2px", paddingLeft: "1px", border: "1px solid #000", fontWeight: "bold", width: "20%" }}>
         Start
