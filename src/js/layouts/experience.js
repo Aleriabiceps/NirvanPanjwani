@@ -257,7 +257,7 @@ export default function App() {
                     </Col>
                     <Col span={12}className="mobile-hidden">
                       <div className="card" style={{ display: "flex", justifyContent: "flex-end", }}>
-                      <div className="table-container" style={{ display: "table", borderCollapse: "collapse", position: "absolute", bottom: -46, left: 25, width: "100%", border: "1px solid #000", paddingRight: "20px", tableLayout: "fixed" }}>
+                      <div className="table-container" style={{ display: "table", borderCollapse: "collapse", position: "absolute", bottom: -90, left: 25, width: "100%", border: "1px solid #000", paddingRight: "20px", tableLayout: "fixed" }}>
   <div className="table-row" style={{ display: "table-row" }}>
     <div className="table-cell table-header" style={{ display: "table-cell", padding: "2px", paddingLeft: "1px", border: "1px solid #000", fontWeight: "bold", width: "20%" }}>
       Start
