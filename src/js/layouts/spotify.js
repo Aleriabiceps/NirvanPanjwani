@@ -70,7 +70,7 @@ export default function Contents () {
     return <Layout>
        <Layout.Header>
        <img
-  src="https://gcdnb.pbrd.co/images/LnqxLZERJBjE.png?o=1"
+  src="https://i.ibb.co/Z2gtJtz/nirvan11.png"
   width={500}
   className="logo"
   style={{ float: "left", marginRight: "20px", marginTop:"70px", marginBottom:"60px" }} // Use float and marginRight
